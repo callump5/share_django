@@ -1,0 +1,87 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <title>Share Respite</title>
+
+    <meta charset="UTF-8">
+    <meta lang="en_us">
+    <meta name="description" content="Do you have a disabled child? (aged 3-19 years)As a registered charity we have been supporting families since 1982. We offer a wide range of opportunities for young people with disabilities. We do this through our holiday and out of school clubs with a range of fun activities within a happy safe and relaxed environment. We have a high staff ratio and are all highly qualified and CRB checked">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Share -">
+    <meta property="og:url" content="https://share-basildon.herokuapp.com/">
+    <meta property="og:site_name" content="Share">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Indie%20Flower|Josefin%20Sans|Nunito|Raleway|Work%20Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+
+
+    {% block head_css %}
+
+    {% endblock %}
+
+
+    {% block head_js %}
+
+    {% endblock %}
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.js"></script>
+    <script src="/static/js/cookies.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123955938-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-123955938-1');
+        </script>
+    <!-- / Global site tag (gtag.js) - Google Analytics -->
+
+
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    <div class="container">
+        {% include 'messages.html' %}
+
+        <main class="content">
+                {% block base %}
+
+                {% endblock %}
+        </main>
+    </div>
+
+    {% include 'footer.html' %}
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('img').each(function () {
+                $(this).attr("src", $(this).attr("src").replace("http://", "https://"));
+                var link = $('img').attr('src');
+                console.log(link)
+            })
+        });
+
+        {% block body_js %}
+
+        {% endblock %}
+    </script>
+
+</body>
+</html>
+

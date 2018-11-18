@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div id="title">
+        <h1 class="title">{{ title.title }}</h1>
+    </div>
+
+
+    <div id="slides">
+        {% for slide in slides %}
+            <div class="slides">
+               <div class="img mySlides fade" style="background-image:url({{ slide.img.url }})"></div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+    <div id="content">
+        {% for land in content %}
+            <article id="landing">
+                {% autoescape off %}
+                    <h2 class="title">{{ land.title }}</h2>
+                    <p style="text-align: center">{{ land.content }}</p>
+                {% endautoescape %}
+            </article>
+        {% endfor %}
+    </div>
+
+
+    <div id="info-boxes">
+        <article class="flex">
+            {% for box in info_boxes %}
+                <section class="col-sm-3 info">
+                    {% autoescape off %}
+                        <h2 class="box-header">{{ box.header }}</h2>
+                        <p>{{ box.content }}</p>
+                    {% endautoescape %}
+                </section>
+            {% endfor %}
+        </article>
+    </div>
+
+
+
+    <script type="text/javascript">
+        var slideIndex = 0;
+        carousel();
+
+
+        function carousel() {
+            var i;
+
+            var x = $(".mySlides");
+
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+
+            slideIndex++;
+
+            if (slideIndex > x.length) {slideIndex = 1}
+
+            x[slideIndex-1].style.display = "block";
+
+            setTimeout(carousel, 6000); // Change image every 2 seconds
+        }
+    </script>
+
+
+{% endblock %}

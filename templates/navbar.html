@@ -1,0 +1,54 @@
+<header class="panel-footer container">
+
+    <nav id="nav" >
+
+        <div id="navbar-header">
+
+        <!-- Nav Logo -->
+            <a href="#">
+                <img id="nav_logo" src="/static/imgs/Logo2.png">
+            </a>
+
+        <!-- Nav Toggler -->
+            <button type="button" id="toggle">MENU</button>
+        </div>
+
+
+        <div id="nav-body">
+
+        <!-- Nav Links -->
+            <ul id="nav-links">
+                <li><a class="nav-btn" href ="/">Home</a></li>
+                <li><a class="nav-btn" href ="/testimonials/">Testimonials</a></li>
+                <li><a class="nav-btn" href="/staff/">Staff</a></li>
+                <li><a class="nav-btn" href="/info/">Info</a></li>
+                <li><a class="nav-btn" href="/fundraising/">Fundraising</a></li>
+                <li><a class="nav-btn" href="/policies/">Policies</a></li>
+                <li><a class="nav-btn" href="/contact-us/">Contact Us</a></li>
+            </ul>
+
+        <!-- Nav Social Links -->
+            <div class="social">
+                {% if facebook %}
+                    <a href="/" class="s-link"><img  href="/" src="/static/icons/Facebook.png"></a>
+                {% endif %}
+
+                {% if email %}
+                    <a href="mailto:me@hotmail.com" class="s-link"><img src="/static/icons/email.png"></a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <script type="text/javascript">
+        $( "#toggle" ).click(function() {
+            $( "#nav-body" ).toggle( "fast", function() {
+                // Animation complete.
+            });
+        });
+        $('#nav-links li').click(function () {
+            var link = $(this).find('a').attr('href');
+            location.href = link
+        })
+    </script>
