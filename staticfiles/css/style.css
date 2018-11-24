@@ -9,17 +9,16 @@ h1, h2, h3, h4, a, p, li, button, label, textarea, input, body {
 }
 
 h1 {
-    font-size: 38px;
+    font-size: 2rem;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 1.7em;
 }
 
 p, li {
-    font-size: 24px;
+    font-size: 1.5em;
 }
-
 /* Variables */
 :root {
     --theme-colour1: #ff4cbf;
@@ -81,7 +80,7 @@ p, li {
 
 
 
-        #nav-links {
+        #nav-links{
             width: 100%;
         }
 
@@ -91,6 +90,7 @@ p, li {
             text-align: center;
             margin: 4px 0;
             cursor: pointer;
+            font-size: 16px;
         }
         .nav-btn {
             color: black;
