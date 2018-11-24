@@ -116,3 +116,19 @@ class HomeBox(models.Model):
         verbose_name = 'Home Box'
         verbose_name_plural= 'Home Boxes'
 
+
+# Background Image
+
+class BackgroundImage(models.Model):
+
+    image = models.ImageField(upload_to='images/background')
+
+    active = models.BooleanField()
+
+
+    def __unicode__(self):
+        return 'Background - ' + str(self.id)
+
+    class Meta():
+        verbose_name = 'Background'
+        verbose_name_plural= 'Background Images'

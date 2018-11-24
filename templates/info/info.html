@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+
+{% block head_js %}
+
+    <title>Information</title>
+{% endblock %}
+
+{% block content %}
+    <h1 class="title">Information</h1>
+
+    {% autoescape off %}
+        <div class="info-page">
+            <article>
+                {% for item in info %}
+                    <p>{{ item.content }}</p>
+                {% endfor %}
+
+            </article>
+
+            <article id="corkboard">
+
+                {% for note in notes %}
+
+                    <aside class="notes">
+                        <div class="pin-header">
+                            <div class='pin'></div>
+                        </div>
+                        <p>{{ note.content }} </p>
+
+                        {% if note.img %}
+                            <img src="{{ note.image.url }}">
+                        {% endif %}
+                    </aside>
+
+                {% endfor %}
+            </article>
+        </div>
+        
+        <div class="sponsers">
+            {% for sponser in sponsers %}
+                <div class="sponser">
+                    <img src="{{ sponser.img.url }}">
+                </div>
+            
+            {% endfor %}
+        </div>
+
+
+{% endautoescape %}
+{% endblock %}

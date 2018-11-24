@@ -1,6 +1,6 @@
 """share_django URL Configuration
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+The `urlpatterns` list routes URLs to views. For more info please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
 Examples:
 Function views
@@ -28,8 +28,12 @@ urlpatterns = [
     # Media Root
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 
-
+    # TINYMCE
+    url(r'', include('tinymce.urls')),
+    # Home Urls
     url(r'', include('home.urls')),
 
+    # Information Urls
+    url(r'', include('information.urls'))
 
 ]
