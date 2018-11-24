@@ -1,0 +1,6 @@
+Django
+Pillow
+pytz
+
+whitenoise
+gunicorn
