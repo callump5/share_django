@@ -189,11 +189,10 @@ p, li {
         align-items: center;
     }
     .img {
-         width: 95%;
+         width: auto;
          height: 45vh;
          background-position: 50% 50%;
          background-repeat: no-repeat;
-         background-size: 100%;
       }
 
     .fade {
