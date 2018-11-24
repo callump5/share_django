@@ -8,6 +8,17 @@ h1, h2, h3, h4, a, p, li, button, label, textarea, input, body {
     color: white;
 }
 
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p, li {
+    font-size: 24px;
+}
 
 /* Variables */
 :root {
