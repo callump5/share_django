@@ -9,15 +9,15 @@ h1, h2, h3, h4, a, p, li, button, label, textarea, input, body {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
 h2 {
-    font-size: 1.7em;
+    font-size: 1.9em;
 }
 
 p, li {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 /* Variables */
 :root {
