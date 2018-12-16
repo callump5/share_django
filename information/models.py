@@ -49,6 +49,7 @@ class StickyNote(models.Model):
 
 
 class Sponsers(models.Model):
+
     company = models.CharField(max_length=250)
 
     image = models.ImageField(upload_to='images/sponsers')

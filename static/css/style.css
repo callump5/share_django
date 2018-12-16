@@ -422,19 +422,22 @@ body {
 
 .staff {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 
 }
 
 .staff-profile {
+    display: flex;
+    flex-direction: row;
     margin: 0 5px;
     margin-bottom: 15px;
     padding: 5px;
 }
+
 .staff-details {
-    margin: 5px;
+    margin: 20px 5px;
 }
 .staff-details img {
     width: 200px;
@@ -442,25 +445,18 @@ body {
 }
 .staff-profile h1 {
     text-align: center;
+    margin-top: 4px;
 }
 .staff-profile p {
     text-align: center;
 }
 
 .bio {
-    width: 200px;
-    height: 250px;
-    text-align: center;
-    opacity: 0;
-    position: absolute;
-    padding: 50px 10px;
-
-    display: none;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #5bc0de;
-    z-index: 20;
+    padding: 10px;
 }
 
 

@@ -1,7 +1,6 @@
 {% extends 'base/base.html' %}
 
 {% block head_js %}
-
     <title>Information</title>
 {% endblock %}
 
@@ -39,7 +38,7 @@
         <div class="sponsers">
             {% for sponser in sponsers %}
                 <div class="sponser">
-                    <img src="{{ sponser.img.url }}">
+                    <img src="{{ sponser.image.url }}">
                 </div>
             
             {% endfor %}

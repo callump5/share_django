@@ -34,6 +34,9 @@ urlpatterns = [
     url(r'', include('home.urls')),
 
     # Information Urls
-    url(r'', include('information.urls'))
+    url(r'', include('information.urls')),
+
+    # Staff Urls
+    url(r'', include('staff.urls')),
 
 ]
