@@ -2,12 +2,12 @@
 
 {% block content %}
 
-    <div id="title">
+    <div id="title" class="content">
         <h1 class="title">{{ title.title }}</h1>
     </div>
 
 
-    <div id="slides">
+    <div id="slides" class="content">
         {% for slide in slides %}
             <div class="slides">
                <div class="img mySlides fade" style="background-image:url({{ slide.img.url }})"></div>
@@ -16,7 +16,7 @@
     </div>
 
 
-    <div id="content">
+    <div id="home-content" class="content">
         {% for land in content %}
             <article id="landing">
                 {% autoescape off %}
@@ -28,12 +28,12 @@
     </div>
 
 
-    <div id="info-boxes">
+    <div id="info-boxes" class="content">
         <article class="flex">
             {% for box in info_boxes %}
                 <section class="col-sm-3 info">
                     {% autoescape off %}
-                        <h2 class="box-header">{{ box.header }}</h2>
+                        <h3 class="box-header">{{ box.header }}</h3>
                         <p>{{ box.content }}</p>
                     {% endautoescape %}
                 </section>
