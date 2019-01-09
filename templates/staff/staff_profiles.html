@@ -30,7 +30,7 @@
                     <div class="staff-profile">
                         <div class="staff-details">
                             <div class='staff-img' style="background-image:url({{ staff.staff_image.url }})"></div>
-                            <h2>{{ staff.user }}</h2>
+                            <h2>{{ staff.user.first_name }}</h2>
                         </div>
                         {% autoescape off %}
                             <div class="staff-bio">
