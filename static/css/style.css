@@ -45,9 +45,12 @@
 
 /* Index */
 
+    body {
+        overflow-x: hidden;
+    }
     .container {
         background-color: #FFFFFF;
-        min-height: 100vh;
+        min-height: 80vh;
         height: 100%;
         width: 100%;
     }
@@ -63,7 +66,7 @@
 
     .title {
         text-align: center;
-        padding: 12px 0;
+        padding: 14px 0;
     }
 
 
@@ -367,6 +370,109 @@
     }
 
 
+.blackbaord{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.content-slider {
+    width: 90%;
+    height: 360px;
+    background-image: url("/static/imgs/blackboard.jpg");
+    border: 5px solid burlywood;
+    overflow: hidden;
+}
+
+.slider {
+    height: auto;
+    width: 90%;
+    margin: 25px auto 0;
+    overflow: visible;
+    position: relative;
+}
+
+.mask {
+    overflow: hidden;
+    height: 320px;
+}
+
+.slider .testimonial {
+    position: absolute;
+    top: -325px;
+    list-style: none;
+    color: white;
+}
+
+.help-chalk {
+    position: relative;
+    color: white;
+}
+
+.help-chalk {
+    float: right;
+}
+
+.testimonial{
+    height: 100%;
+    width: 100%;
+}
+
+.testimonial h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.testimonial p {
+    padding-bottom: 5px;
+}
+
+p.source {
+    text-align: right;
+    position: absolute;
+    right: 0px;
+    bottom: 20px;
+
+}
+
+.slider .testimonial.anim1 {
+    -moz-animation: cycle 25s linear infinite;
+    -webkit-animation: cycle 25s linear infinite;
+    animation: cycle 25s linear infinite;
+}
+
+.slider .testimonial.anim2 {
+    -moz-animation: cycle2 25s linear infinite;
+    -webkit-animation: cycle2 25s linear infinite;
+    animation: cycle2 25s linear infinite;
+}
+
+.slider .testimonial.anim3 {
+    -moz-animation: cycle3 25s linear infinite;
+    -webkit-animation: cycle3 25s linear infinite;
+     animation: cycle3 25s linear infinite;
+}
+
+.slider .testimonial.anim4 {
+    -moz-animation: cycle4 25s linear infinite;
+    -webkit-animation: cycle4 25s linear infinite;
+    animation: cycle4 25s linear infinite;
+}
+
+.slider .testimonial.anim5 {
+    -moz-animation: cycle5 25s linear infinite;
+    -webkit-animation: cycle5 25s linear infinite;
+    animation: cycle5 25s linear infinite;
+}
+
+.slider:hover .testimonial{
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+
+
 /* Staff Profiles */
 
 .role-section {
@@ -396,7 +502,7 @@
 .staff-profile {
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 5px 0;
 }
 .staff-bio{
@@ -407,9 +513,9 @@
     height: 200px;
     width: 200px;
 
-        background-size: cover;
+    background-size: cover;
     background-position: center;
-        background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
 
@@ -457,6 +563,19 @@
             border-bottom-right-radius: 15px;
         }
 
+
+    /* Testimonials */
+
+        .help-chalk {
+            display: block;
+        }
+
+        /* Staff */
+
+        .staff-profile {
+
+            flex-direction: row;
+        }
 
     }
 
@@ -592,111 +711,6 @@
 
 }
 
-
-
-
-/* Testimonials */
-
-.blackbaord{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-.content-slider {
-    width: 90%;
-    height: 360px;
-    background-image: url("/static/imgs/blackboard.jpg");
-    border: 5px solid burlywood;
-    overflow: hidden;
-}
-
-.slider {
-    height: auto;
-    width: 90%;
-    margin: 25px auto 0;
-    overflow: visible;
-    position: relative;
-}
-
-.mask {
-    overflow: hidden;
-    height: 320px;
-}
-
-.slider .testimonial {
-    position: absolute;
-    top: -325px;
-    list-style: none;
-    color: white;
-}
-
-.help-chalk {
-    position: relative;
-    color: white;
-}
-
-.help-chalk {
-    float: right;
-}
-
-.testimonial{
-    height: 100%;
-    width: 100%;
-}
-
-.testimonial h1 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.testimonial p {
-    padding-bottom: 5px;
-}
-
-p.source {
-    text-align: right;
-    position: absolute;
-    right: 0px;
-    bottom: 20px;
-
-}
-
-.slider .testimonial.anim1 {
-    -moz-animation: cycle 25s linear infinite;
-    -webkit-animation: cycle 25s linear infinite;
-    animation: cycle 25s linear infinite;
-}
-
-.slider .testimonial.anim2 {
-    -moz-animation: cycle2 25s linear infinite;
-    -webkit-animation: cycle2 25s linear infinite;
-    animation: cycle2 25s linear infinite;
-}
-
-.slider .testimonial.anim3 {
-    -moz-animation: cycle3 25s linear infinite;
-    -webkit-animation: cycle3 25s linear infinite;
-     animation: cycle3 25s linear infinite;
-}
-
-.slider .testimonial.anim4 {
-    -moz-animation: cycle4 25s linear infinite;
-    -webkit-animation: cycle4 25s linear infinite;
-    animation: cycle4 25s linear infinite;
-}
-
-.slider .testimonial.anim5 {
-    -moz-animation: cycle5 25s linear infinite;
-    -webkit-animation: cycle5 25s linear infinite;
-    animation: cycle5 25s linear infinite;
-}
-
-.slider:hover .testimonial{
-    -moz-animation-play-state: paused;
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-}
 
 
 
