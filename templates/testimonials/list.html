@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+
+{% block head_js %}
+
+        <title>Testimonails</title>
+        <script>
+            $(document).ready(function () {
+                i = 1;
+
+                $('.testimonial').each(function () {
+                    $(this).addClass('anim' + i);
+                    i += 1;
+                });
+            });
+        </script>
+    {% endblock %}
+
+{% block content %}
+
+    <h1 class="title">What Our Friends Say!</h1>
+
+    <div class="blackbaord">
+        <div class="content-slider">
+            <div class="slider">
+                <div class="mask">
+
+                    {% for testimonial in list %}
+                        {% if testimonial.id < 6 %}
+                            <article class="testimonial">
+                                <h1>{{ testimonial.title }}</h1>
+                                {% autoescape off %}
+                                    <p class="quote">{{ testimonial.content }}</p>
+                                    <p class="source">{{ testimonial.author }}</p>
+                            </article>
+                                {% endautoescape %}
+                        {% endif %}
+
+                    {% endfor %}
+
+                    <p class="help-chalk">Hover with your mouse to pause!</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
