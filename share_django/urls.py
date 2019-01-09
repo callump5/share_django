@@ -30,10 +30,17 @@ urlpatterns = [
 
     # TINYMCE
     url(r'', include('tinymce.urls')),
+
     # Home Urls
     url(r'', include('home.urls')),
 
     # Information Urls
-    url(r'', include('information.urls'))
+    url(r'', include('information.urls')),
+
+    # Testimonials
+    url(r'', include('testimonials.urls')),
+
+    # Staff
+    url(r'', include('staff.urls'))
 
 ]

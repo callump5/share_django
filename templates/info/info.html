@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+
     <h1 class="title">Information</h1>
 
     {% autoescape off %}
@@ -39,9 +40,8 @@
         <div class="sponsers">
             {% for sponser in sponsers %}
                 <div class="sponser">
-                    <img src="{{ sponser.img.url }}">
+                    <img src="{{ sponser.image.url }}">
                 </div>
-            
             {% endfor %}
         </div>
 

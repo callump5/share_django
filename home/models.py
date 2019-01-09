@@ -58,7 +58,7 @@ class EmailLink(models.Model):
 
 class SlideImage(models.Model):
 
-    img = models.ImageField(upload_to='images')
+    img = models.ImageField(upload_to='images/home_slides')
 
     def __unicode__(self):
         return 'Slide Image - ' + str(self.id)
@@ -89,7 +89,6 @@ class HomeTitle(models.Model):
 class HomeContent(models.Model):
 
     title = models.CharField(max_length=70)
-
     content = HTMLField()
 
     def __unicode__(self):
@@ -106,7 +105,6 @@ class HomeContent(models.Model):
 class HomeBox(models.Model):
 
     header = models.CharField(max_length=200)
-
     content = HTMLField(max_length=260)
 
     def __unicode__(self):
@@ -122,7 +120,6 @@ class HomeBox(models.Model):
 class BackgroundImage(models.Model):
 
     image = models.ImageField(upload_to='images/background')
-
     active = models.BooleanField()
 
 

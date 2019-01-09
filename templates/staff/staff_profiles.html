@@ -1,0 +1,47 @@
+{%  extends 'base/base.html' %}
+
+{% block head_css %}
+    <style type="text/css">
+        body {
+            background-color: #e0e0e0;
+        }
+    </style>
+{% endblock %}
+
+{% block head_js %}
+
+    <title>Meet Our Staff </title>
+
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="title">Meet Our Staff</h1>
+    
+    {% for role in roles %}
+
+        <div class="role-section">
+
+            <h1 class="role">{{ role }}s</h1>
+
+            {% for staff in staffs %}
+
+                {% if staff.role.id == role.id %}
+                    <div class="staff-profile">
+                        <div class="staff-details">
+                            <div class='staff-img' style="background-image:url({{ staff.staff_image.url }})"></div>
+                            <h2>{{ staff.user }}</h2>
+                        </div>
+                        {% autoescape off %}
+                            <div class="staff-bio">
+                                <p>{{ staff.bio }}</p>
+                            </div>
+                        {% endautoescape %}
+                    </div>
+                {% endif %}
+
+            {% endfor %}
+
+        </div>
+    {% endfor %}
+{% endblock %}
