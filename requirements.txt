@@ -17,6 +17,6 @@ whitenoise
 Django
 Pillow
 pytz
-
+django_forms_bootstrap
 whitenoise
 gunicorn
