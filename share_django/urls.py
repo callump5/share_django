@@ -41,6 +41,9 @@ urlpatterns = [
     url(r'', include('testimonials.urls')),
 
     # Staff
-    url(r'', include('staff.urls'))
+    url(r'', include('staff.urls')),
+
+    # Contact
+    url(r'', include('contact_us.urls'))
 
 ]

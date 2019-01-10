@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'home',
     'information',
     'testimonials',
-    'staff'
+    'staff',
+    'contact_us',
+    'django_forms_bootstrap'
 ]
 
 MIDDLEWARE = [
@@ -126,15 +128,30 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') ##specify static root
 STATIC_URL = '/static/'
 
+
+# Media Files
+
 MEDIA_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = '/media/'
 
+
+# TinyMCE
+
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, 'static', 'js', 'tinymce', 'tinymce.min.js')
+
+
+# Email
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'share.contactme@gmail.com'
+EMAIL_HOST_PASSWORD = 'Share123'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
