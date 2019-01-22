@@ -2,8 +2,10 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from .models import ContactRequest, StaffContact
+
+from .models import FundraisingTarget, Donations
+
 # Register your models here.
 
-admin.site.register(ContactRequest)
-admin.site.register(StaffContact)
+admin.site.register(FundraisingTarget)
+admin.site.register(Donations)

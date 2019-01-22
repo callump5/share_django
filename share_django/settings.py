@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'testimonials',
     'staff',
     'contact_us',
+    'fundraising',
     'django_forms_bootstrap'
 ]
 

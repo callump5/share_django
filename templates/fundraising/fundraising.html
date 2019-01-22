@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+
+{% block base %}
+
+    <h1 class="title">Fundraising</h1>
+
+    <div id="targets">
+        {% for target in targets %}
+            {% if target.active %}
+
+                <div class="target">
+
+                    <h2>{{ target.title }}</h2>
+
+                    {% autoescape off %}
+                        <p>{{ target.description }}</p>
+                    {% endautoescape %}
+
+                    {% if target.target > 0  %}
+                        <p id="target">Target: £{{ target.target }}</p>
+                    {% endif %}
+
+                    <p>Acheived: £{{ target.count_achieved }}</p>
+
+                </div>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+
+
+
+{% endblock %}
