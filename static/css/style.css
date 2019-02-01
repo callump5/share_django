@@ -576,7 +576,6 @@ p.source {
     .target {
         margin-bottom: 20px;
         padding: 20px;
-        background: var(--theme-colour1);
     }
 
     .target h1 {
