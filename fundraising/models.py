@@ -1,16 +1,33 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+
+import os
+from django.utils.timezone import now
+
 from django.db import models
 from tinymce.models import HTMLField
 
 # Create your models here.
+
+
+def upload_staff_img(instance, filename):
+    filename_base, filename_ext = os.path.splitext(filename)
+    return 'fundraising/%s%s' % (
+        now().strftime("%Y%m%d%H%M%S"),
+        filename_ext.lower(),
+    )
+
 
 class FundraisingTarget(models.Model):
     title = models.CharField(max_length=200)
     description = HTMLField()
     target = models.DecimalField(decimal_places=2, max_digits=7)
     active = models.BooleanField()
+
+    image_1 = models.ImageField(upload_to='images/fundraising')
+    image_2 = models.ImageField(upload_to='images/fundraising', help_text='Not required', null=True, blank=True)
+    image_3 = models.ImageField(upload_to='images/fundraising', help_text='Not required', null=True, blank=True)
 
     def __unicode__(self):
         return self.title
