@@ -615,6 +615,8 @@ p.source {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        background-color: rgba(200, 200, 200, 0.53);
+        border: 5px solid rgba(200, 200, 200, 0.53);;
         margin: 20px 0;
     }
 
@@ -647,8 +649,12 @@ p.source {
         height: 49%;
         margin-left: 2px;
         position: absolute;
-        top: 0;
+        top: 10;
         right: 0;
+    }
+
+    .target-img-3:nth-child(2n) {
+        bottom: 0;
     }
 
     .img-3 {
@@ -668,9 +674,10 @@ p.source {
         animation-direction: alternate;
         height: 400px;
         width: auto;
-        border: 10px solid white;
+        border: 10px solid rgba(200, 200, 200, 0.53);
         cursor: pointer;
         z-index: 100;
+        background-color: white;
     }
 
     .service-pointer {
