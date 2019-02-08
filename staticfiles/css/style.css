@@ -615,6 +615,8 @@ p.source {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        background-color: rgba(200, 200, 200, 0.53);
+        border: 5px solid rgba(200, 200, 200, 0.53);;
         margin: 20px 0;
     }
 
@@ -647,8 +649,12 @@ p.source {
         height: 49%;
         margin-left: 2px;
         position: absolute;
-        top: 0;
+        top: 10;
         right: 0;
+    }
+
+    .target-img-3:nth-child(2n) {
+        bottom: 0;
     }
 
     .img-3 {
@@ -668,9 +674,10 @@ p.source {
         animation-direction: alternate;
         height: 400px;
         width: auto;
-        border: 10px solid white;
+        border: 10px solid rgba(200, 200, 200, 0.53);
         cursor: pointer;
         z-index: 100;
+        background-color: white;
     }
 
     .service-pointer {
@@ -682,7 +689,47 @@ p.source {
         margin: 5px;
 }
 
+    #booking-form {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .form-popup {
+        display: none;
+        position: fixed;
+        top: 50px;
+        right: 50vh;
+        border: 3px solid #f1f1f1;
+        z-index: 90;
+        width: 600px;
+        background-color: var(--theme-colour2);
+        padding: 30px;
+    }
+
+
+    #close-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 25px;
+        width: 25px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .donate-btn, #close-btn, .btn {
+        border-color: var(--theme-colour3);
+        background-color: var(--theme-colour3);
+    }
+    .donate-btn:hover, #close-btn:hover, .btn:hover {
+        border-color: var(--theme-colour1);
+        background-color: var(--theme-colour1);
+    }
+    select, input {
+        border-radius: 20px;
+    }
 
 /* RESPONSIVE MIN WIDTH - 650PX */
 @media screen and (min-width: 650px) {

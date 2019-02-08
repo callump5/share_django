@@ -50,6 +50,8 @@ class Donations(models.Model):
     target = models.ForeignKey(FundraisingTarget)
     donation = models.DecimalField(decimal_places=2, max_digits=7)
 
+    stripe_id = models.CharField(max_length=40, default='')
+
     def __unicode__(self):
         return 'Donation'
 

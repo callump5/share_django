@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import stripe
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -155,4 +157,12 @@ EMAIL_HOST_USER = 'share.contactme@gmail.com'
 EMAIL_HOST_PASSWORD = 'Share123'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+
+
+# Stripe
+
+
+stripe.api_key = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'
+STRIPE_SECRET_KEY = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_caLAMi5hXVyU8cYdjeN0J2Bo'
 
