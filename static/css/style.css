@@ -562,7 +562,6 @@ p.source {
     #contact-btn {
         float: right;
         margin: 15px 0;
-        background-color: var(--theme-colour2);
     }
 
     .contacts {
