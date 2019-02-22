@@ -1,9 +1,17 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
-    <div>
-        {% for file in files %}
-            <a href="{{ file.document.url }}">{{ file.document }}</a>
-        {% endfor %}
-    </div>
+
+    <h1 class="title">Policies</h1>
+
+    {% for file in files %}
+        <div class="files">
+            <div class="file-desc">
+                <h3>{{ file.title }}</h3>
+                <p>{{ file.desciption }}</p>
+            </div>
+            <a class="upload" href="{{ file.document.url }}"><img src="/static/icons/file_download.png"></a>
+        </div>
+    {% endfor %}
 {% endblock %}
+

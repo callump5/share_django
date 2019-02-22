@@ -740,6 +740,35 @@ p.source {
         border-radius: 20px;
     }
 
+
+    /* Policies */
+
+    .files {
+        border-bottom: 1px solid grey;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+
+    }
+    .file-desc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .upload img {
+        margin: 0 0 0 10px;
+    }
+
+
+    /* Cookies */
+
+    .cookie {
+        padding: 10px 0;
+        border-bottom: 1px solid grey;
+    }
+
 /* RESPONSIVE MIN WIDTH - 650PX */
 @media screen and (min-width: 650px) {
 

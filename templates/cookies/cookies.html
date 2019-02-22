@@ -1,0 +1,25 @@
+{%  extends 'base/base.html' %}
+
+{% block content %}
+
+    <h1 class="title">Privacy & Cookies</h1>
+
+    <div id="privacy">
+
+        {% for priv in privacy  %}
+            {% autoescape off %}
+                <p>{{ priv.info }}</p>
+            {% endautoescape %}
+        {% endfor %}
+
+        {% for cookie in cookies %}
+            <div class="cookie">
+                <h3>{{ cookie.name }}</h3>
+                {% autoescape off %}
+                    <p>{{ cookie.desription }}</p>
+                {% endautoescape %}
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

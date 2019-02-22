@@ -50,6 +50,9 @@ urlpatterns = [
     url(r'', include('fundraising.urls')),
 
     # Policies
-    url(r'', include('policies.urls'))
+    url(r'', include('policies.urls')),
+
+    # Privacy & Cookies
+    url(r'', include('cookies.urls'))
 
 ]
