@@ -76,7 +76,7 @@
     }
 
     #cookie-law {
-        position: absolute;
+        position: fixed;
         text-align: center;
 
         padding: 20px;
