@@ -70,8 +70,7 @@
         padding: 20px 0;
     }
 
-    #base-container
-    {
+    #base-container {
         padding-bottom: 20px;
         min-height: 80vh;
     }
@@ -585,6 +584,9 @@ p.source {
 
 /* Fundraising */
 
+    #target_0 {
+        padding-top: 0
+    }
     .target-donations {
         margin-top: 5px;
         text-align: center;

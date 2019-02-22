@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
+# TODO: if settings.DEBUG: fil and images
+
 import os
 import stripe
 
@@ -49,6 +51,7 @@ INSTALLED_APPS = [
     'staff',
     'contact_us',
     'fundraising',
+    'policies',
     'django_forms_bootstrap'
 ]
 
@@ -160,7 +163,6 @@ EMAIL_USE_SSL = False
 
 
 # Stripe
-
 
 stripe.api_key = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'
 STRIPE_SECRET_KEY = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'

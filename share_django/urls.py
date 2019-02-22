@@ -47,6 +47,9 @@ urlpatterns = [
     url(r'', include('contact_us.urls')),
 
     # Fundraising
-    url(r'', include('fundraising.urls'))
+    url(r'', include('fundraising.urls')),
+
+    # Policies
+    url(r'', include('policies.urls'))
 
 ]
