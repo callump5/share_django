@@ -165,12 +165,12 @@ EMAIL_USE_SSL = False
 
 # Stripe
 
-stripe.api_key = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'
-STRIPE_SECRET_KEY = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'
-STRIPE_PUBLISHABLE_KEY = 'pk_test_caLAMi5hXVyU8cYdjeN0J2Bo'
+stripe.api_key = ''
+STRIPE_SECRET_KEY = ''
+STRIPE_PUBLISHABLE_KEY = ''
 
 
-# RecaptchA
+# Recaptcha
 
-GOOGLE_RECAPTCHA_SECRET_KEY = '6Lcm0pQUAAAAAJ_BKZu1s7-WfCPRMcJURcMRReNK'
+GOOGLE_RECAPTCHA_SECRET_KEY = ''
 
