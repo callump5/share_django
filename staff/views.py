@@ -11,7 +11,7 @@ import random
 
 def get_staff(request):
     staff = Staff_Bio.objects.all()
-    roles = Role.objects.all()
+    roles = Role.objects.all().order_by('rank')
 
     count = BackgroundImage.objects.filter(active=True).count()
     rand = random.randint(1, count)

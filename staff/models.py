@@ -19,6 +19,7 @@ def upload_staff_img(instance, filename):
 
 class Role(models.Model):
     job_role = models.CharField(max_length=200)
+    rank = models.IntegerField()
 
     def __unicode__(self):
         return self.job_role

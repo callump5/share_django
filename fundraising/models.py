@@ -48,7 +48,8 @@ class FundraisingTarget(models.Model):
 class Donations(models.Model):
 
     target = models.ForeignKey(FundraisingTarget)
-    donation = models.DecimalField(decimal_places=2, max_digits=7)
+    donation = models.DecimalField(max_digits=8, decimal_places=2, default=1.50)
+    
 
     stripe_id = models.CharField(max_length=40, default='')
 

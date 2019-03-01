@@ -40,7 +40,7 @@ def get_fundraising(request):
         if form.is_valid():
             try:
                 customer = stripe.Charge.create(
-                    amount= form.cleaned_data['donation'],
+                    amount= int(form.cleaned_data['donation'] * 100),
                     currency="GBP",
                     description= 'Share',
                     card= form.cleaned_data['stripe_id'],
@@ -49,12 +49,14 @@ def get_fundraising(request):
                     new_form = form.save(False)
 
                     new_form.save()
+                    messages.success(request, 'Thank you for your donation of £' + str(
+                        float(form.cleaned_data['donation'])) + ' It is greatly appreciated!')
+
                 else:
                     messages.error(request, "We were unable to take a payment with that card!")
             except stripe.error.CardError, e:
                 messages.error(request, "Your card was declined!")
 
-            messages.success(request, 'Thank you for your booking!')
             return redirect('home')
     else:
         form = DonationForm()

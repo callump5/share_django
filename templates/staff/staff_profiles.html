@@ -17,11 +17,9 @@
 {% block content %}
 
     <h1 class="title">Meet Our Staff</h1>
-    
     {% for role in roles %}
 
         <div class="role-section">
-
             <h1 class="role">{{ role }}s</h1>
 
             {% for staff in staffs %}
@@ -39,9 +37,7 @@
                         {% endautoescape %}
                     </div>
                 {% endif %}
-
             {% endfor %}
-
-        </div>
+         </div>
     {% endfor %}
 {% endblock %}
