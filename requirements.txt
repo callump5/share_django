@@ -21,3 +21,4 @@ django_forms_bootstrap
 whitenoise
 gunicorn
 stripe
+requests
