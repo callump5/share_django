@@ -10,9 +10,9 @@ from tinymce.models import HTMLField
 
 class StaffContact(models.Model):
 
-    user = models.ForeignKey(User, related_name='staff_contactact')
+    user = models.ForeignKey(User, related_name='staff_contact')
     number = models.CharField(max_length=15)
-    email = models.EmailField()
+    email = models.CharField(max_length=300)
 
     def __unicode__(self):
         return self.user.get_full_name()
@@ -26,7 +26,7 @@ class ContactRequest(models.Model):
 
     name = models.CharField(max_length=300, null=False)
     number = models.CharField(max_length=300)
-    email = models.CharField(max_length=300)
+    email = models.EmailField()
 
     text = HTMLField()
 
