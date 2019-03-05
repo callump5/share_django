@@ -17,6 +17,9 @@ import stripe
 import dj_database_url
 
 
+AWS_ACCESS_KEY_ID = os.environ['AWS_ID']
+AWS_SECRT_ACCESS_KEY = os.environ['AWS_KEY']
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -137,6 +140,17 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = '/media/'
+
+
+# Amazon WS
+
+
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_S3_SECURE_URLS = False       # use http instead of https
+AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related query parameters for requests
+
+AWS_STORAGE_BUCKET_NAME = 'sharegallerymedia'
 
 
 
