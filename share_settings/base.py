@@ -16,8 +16,7 @@ import os
 import stripe
 import dj_database_url
 
-AWS_ACCESS_KEY_ID = os.getenv('AWS_ID')
-AWS_SECRT_ACCESS_KEY = os.getenv('AWS_KEY')
+
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -151,6 +150,7 @@ AWS_S3_SECURE_URLS = False       # use http instead of https
 AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related query parameters for requests
 
 AWS_STORAGE_BUCKET_NAME = 'sharegallerymedia'
+
 
 
 
