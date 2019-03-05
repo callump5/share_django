@@ -13,11 +13,11 @@ from tinymce.models import HTMLField
 
 # Upload images to Amazon WS
 
-def upload_share_img(instance, filename):
+def upload_home_img(instance, filename):
 
     filename_base, filename_ext = os.path.split(filename)
 
-    return 'share/%s%s' % (
+    return 'home/%s%s' % (
         now().strftime("%Y%m%d%H%M%S"),
         filename_ext.lower(),
     )
@@ -58,7 +58,7 @@ class EmailLink(models.Model):
 
 class SlideImage(models.Model):
 
-    img = models.ImageField(upload_to='images/home_slides')
+    img = models.ImageField(upload_to=upload_home_img)
 
     def __unicode__(self):
         return 'Slide Image - ' + str(self.id)
@@ -119,7 +119,7 @@ class HomeBox(models.Model):
 
 class BackgroundImage(models.Model):
 
-    image = models.ImageField(upload_to='images/background')
+    image = models.ImageField(upload_to=upload_home_img)
     active = models.BooleanField()
 
 

@@ -7,11 +7,12 @@ from django.utils.timezone import now
 
 from django.db import models
 from tinymce.models import HTMLField
+from share_settings.dev import DEBUG
 
 # Create your models here.
 
 
-def upload_staff_img(instance, filename):
+def upload_fundraising_img(instance, filename):
     filename_base, filename_ext = os.path.splitext(filename)
     return 'fundraising/%s%s' % (
         now().strftime("%Y%m%d%H%M%S"),
@@ -25,9 +26,9 @@ class FundraisingTarget(models.Model):
     target = models.DecimalField(decimal_places=2, max_digits=7)
     active = models.BooleanField()
 
-    image_1 = models.ImageField(upload_to='images/fundraising')
-    image_2 = models.ImageField(upload_to='images/fundraising', help_text='Not required', null=True, blank=True)
-    image_3 = models.ImageField(upload_to='images/fundraising', help_text='Not required', null=True, blank=True)
+    image_1 = models.ImageField(upload_to=upload_fundraising_img)
+    image_2 = models.ImageField(upload_to=upload_fundraising_img, help_text='Not required', null=True, blank=True)
+    image_3 = models.ImageField(upload_to=upload_fundraising_img, help_text='Not required', null=True, blank=True)
 
     def __unicode__(self):
         return self.title

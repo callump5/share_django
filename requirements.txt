@@ -22,3 +22,7 @@ whitenoise
 gunicorn
 stripe
 requests
+dj_database_url
+django-storages
+whitenoise
+boto

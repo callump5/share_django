@@ -12,9 +12,9 @@ import os
 # Create your models here.
 
 
-def upload_share_img(instance, filename):
+def upload_info_img(instance, filename):
     filename_base, filename_ext = os.path.splitext(filename)
-    return 'share/%s%s' % (
+    return 'info/%s%s' % (
         now().strftime("%Y%m%d%H%M%S"),
         filename_ext.lower(),
     )
@@ -36,7 +36,7 @@ class StickyNote(models.Model):
 
     title = models.CharField(max_length=50)
     content = models.CharField(max_length=300)
-    image = models.ImageField(upload_to='images/sticky', null=True, blank=True)
+    image = models.ImageField(upload_to=upload_info_img, null=True, blank=True)
 
     def __unicode__(self):
         return self.title
@@ -50,7 +50,7 @@ class Sponsers(models.Model):
 
     company = models.CharField(max_length=250)
 
-    image = models.ImageField(upload_to='images/sponsers')
+    image = models.ImageField(upload_to=upload_info_img)
 
     def __unicode__(self):
         return self.company

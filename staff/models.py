@@ -33,7 +33,7 @@ class Staff_Bio(models.Model):
     user = models.ForeignKey(User, related_name='staff_profile')
     role = models.ForeignKey(Role, related_name='staff_job_role')
     bio = HTMLField()
-    staff_image= models.ImageField(upload_to='images/staff')
+    staff_image= models.ImageField(upload_to=upload_staff_img)
 
     def __unicode__(self):
         return self.user.first_name
