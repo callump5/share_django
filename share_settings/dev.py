@@ -10,6 +10,10 @@ if DEBUG:
     AWS_ACCESS_KEY_ID = AWS_ID
     AWS_SECRET_ACCESS_KEY = AWS_KEY
 
+else:
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
