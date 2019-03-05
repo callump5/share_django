@@ -16,9 +16,9 @@ import os
 import stripe
 import dj_database_url
 
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ID')
+AWS_SECRT_ACCESS_KEY = os.getenv('AWS_KEY')
 
-AWS_ACCESS_KEY_ID = os.environ['AWS_ID']
-AWS_SECRT_ACCESS_KEY = os.environ['AWS_KEY']
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
