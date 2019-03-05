@@ -25,4 +25,3 @@ requests
 dj_database_url
 django-storages
 boto
-whitenoise
