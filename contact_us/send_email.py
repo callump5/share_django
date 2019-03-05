@@ -1,5 +1,5 @@
 from django.core.mail import send_mail
-from share_django.settings import EMAIL_HOST_USER
+from share_settings.base import EMAIL_HOST_USER
 
 from django.contrib import messages
 

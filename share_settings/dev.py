@@ -21,3 +21,18 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+
+# Keys
+
+if DEBUG:
+    from aws_login import *
+else:
+
+    stripe.api_key = os.getenv('stripe.api_key')
+    STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
+    STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY')
+
+    # Recaptcha
+
+    GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTCHA_SECRET_KEY')

@@ -17,8 +17,6 @@ import stripe
 import dj_database_url
 
 
-
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -140,19 +138,13 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = '/media/'
 
-
 # Amazon WS
-
-
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 AWS_S3_SECURE_URLS = False       # use http instead of https
 AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related query parameters for requests
 
 AWS_STORAGE_BUCKET_NAME = 'sharegallerymedia'
-
-
-
 
 # TinyMCE
 
@@ -168,22 +160,3 @@ EMAIL_HOST_PASSWORD = 'Share123'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-
-# Stripe
-
-stripe.api_key = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'
-STRIPE_SECRET_KEY = 'pk_test_caLAMi5hXVyU8cYdjeN0J2Bo'
-STRIPE_PUBLISHABLE_KEY = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'
-
-
-# Recaptcha
-
-GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTCHA_SECRET_KEY')
-
-
-# Var Keys
-
-
-STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
-stripe.api_key = os.getenv('stripe.api_key')

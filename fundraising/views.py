@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.template.context_processors import csrf
 import stripe
 import stripe.error
-from share_django import settings
+from share_settings import dev
 
 from home.models import BackgroundImage, FacebookLink, EmailLink
 from fundraising.models import FundraisingTarget, Donations
@@ -72,7 +72,7 @@ def get_fundraising(request):
         'targets': targets,
         'donations': donations,
         'donation_form': form,
-        'publishable': settings.STRIPE_PUBLISHABLE_KEY,
+        'publishable': dev.STRIPE_PUBLISHABLE_KEY,
 
     }
 

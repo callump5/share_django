@@ -11,7 +11,7 @@ from home.models import BackgroundImage, EmailLink, FacebookLink
 import random
 
 import requests
-from share_django.settings import GOOGLE_RECAPTCHA_SECRET_KEY as GRK
+from share_settings.dev import GOOGLE_RECAPTCHA_SECRET_KEY as GRK
 
 from django.contrib import messages
 
