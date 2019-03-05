@@ -2,7 +2,6 @@ from base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-from aws_login import *
 
 import aws_login
 
