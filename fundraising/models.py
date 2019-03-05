@@ -7,7 +7,6 @@ from django.utils.timezone import now
 
 from django.db import models
 from tinymce.models import HTMLField
-from share_settings.dev import DEBUG
 
 # Create your models here.
 
