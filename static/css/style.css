@@ -336,6 +336,7 @@
         padding: 0 10px;
         padding-bottom: 20px;
         transform: rotate(-2deg);
+        font-size: 0.8em;
 
         display: flex;
         flex-direction: column;
@@ -380,11 +381,11 @@
         flex-wrap: wrap;
         margin-top: 50px;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .sponser img {
-        width: 150px;
-        height: auto;
+        width: auto;
+        height: 75px;
     }
 
 /* Testimonials */

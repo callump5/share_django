@@ -26,7 +26,7 @@ class ContactRequest(models.Model):
 
     name = models.CharField(max_length=300, null=False)
     number = models.CharField(max_length=300)
-    email = models.EmailField()
+    email = models.CharField(max_length=300)
 
     text = HTMLField()
 
