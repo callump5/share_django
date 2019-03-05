@@ -3,13 +3,13 @@ from base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+if DEBUG:
+    from aws_login import AWS_SECRT_ACCESS_KEY as AWS_KEY
+    from aws_login import AWS_ACCESS_KEY_ID as AWS_ID
 
-from aws_login import AWS_SECRT_ACCESS_KEY as AWS_KEY
-from aws_login import AWS_ACCESS_KEY_ID as AWS_ID
 
-
-AWS_ACCESS_KEY_ID = AWS_ID
-AWS_SECRET_ACCESS_KEY = AWS_KEY
+    AWS_ACCESS_KEY_ID = AWS_ID
+    AWS_SECRET_ACCESS_KEY = AWS_KEY
 
 
 # Database
@@ -27,8 +27,8 @@ DATABASES = {
 
 if DEBUG:
     from aws_login import *
-else:
 
+else:
     stripe.api_key = os.getenv('stripe.api_key')
     STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
     STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY')
