@@ -169,10 +169,21 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
 
+# Stripe
+
+stripe.api_key = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'
+STRIPE_SECRET_KEY = 'pk_test_caLAMi5hXVyU8cYdjeN0J2Bo'
+STRIPE_PUBLISHABLE_KEY = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'
+
+
+# Recaptcha
+
+GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTCHA_SECRET_KEY')
+
 
 # Var Keys
 
+
 STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
-GOOGLE_RECAPTCHA_SECRET_KEY = os.getenv('GOOGLE_RECAPTCHA_SECRET_KEY')
 stripe.api_key = os.getenv('stripe.api_key')
