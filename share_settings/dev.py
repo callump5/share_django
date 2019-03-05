@@ -3,10 +3,12 @@ from base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-import aws_login
+from aws_login import AWS_SECRT_ACCESS_KEY as AWS_KEY
+from aws_login import AWS_ACCESS_KEY_ID as AWS_ID
 
-AWS_ACCESS_KEY_ID = aws_login.AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY = aws_login.AWS_SECRT_ACCESS_KEY
+
+AWS_ACCESS_KEY_ID = AWS_ID
+AWS_SECRET_ACCESS_KEY = AWS_KEY
 
 
 # Database
@@ -18,4 +20,3 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-

@@ -160,3 +160,11 @@ EMAIL_HOST_PASSWORD = 'Share123'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
+
+# Stripe
+
+
+stripe.api_key = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'
+STRIPE_SECRET_KEY = 'sk_test_QqxSYpwLmUKy36M4D3qwQKYv'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_caLAMi5hXVyU8cYdjeN0J2Bo'
+
