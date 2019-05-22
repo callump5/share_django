@@ -18,8 +18,9 @@
 
 
     <link href="https://fonts.googleapis.com/css?family=Bitter|Indie%20Flower|Josefin%20Sans|Nunito|Raleway|Work%20Sans" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="/static/css/reset.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Oxygen|Quicksand&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/static/css/style.css" type="text/css">
 
     <script src="/static/js/jquery.js"></script>
@@ -50,33 +51,13 @@
 
 </head>
 
-<body style="background-image:url({{ background.image.url }})">
+<body>
 
-    {% include 'base/navbar.html' %}
+    {% block base %}
 
-    <div id="base-container" class="container">
-        {% include 'base/messages.html' %}
-
-        <main class="content">
-                {% block base %}
-
-                {% endblock %}
-        </main>
-    </div>
-
-    {% include 'base/footer.html' %}
-
-
+    {% endblock %}
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('img').each(function () {
-                $(this).attr("src", $(this).attr("src").replace("http://", "https://"));
-                var link = $('img').attr('src');
-                console.log(link)
-            })
-        });
-
         {% block body_js %}
 
         {% endblock %}

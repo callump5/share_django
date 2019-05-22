@@ -2,19 +2,6 @@
 
 {% block content %}
 
-    <div id="title" class="content">
-        <h1 class="title">{{ title.title }}</h1>
-    </div>
-
-
-    <div id="slides" class="content">
-        {% for slide in slides %}
-            <div class="slides">
-               <div class="img mySlides fade" style="background-image:url({{ slide.img.url }})"></div>
-            </div>
-        {% endfor %}
-    </div>
-
 
     <div id="home-content" class="content">
         {% for land in content %}
@@ -28,18 +15,18 @@
     </div>
 
 
-    <div id="info-boxes" class="content">
-        <article class="flex">
-            {% for box in info_boxes %}
-                <section class="col-sm-3 info">
-                    {% autoescape off %}
-                        <h3 class="box-header">{{ box.header }}</h3>
-                        <p>{{ box.content }}</p>
-                    {% endautoescape %}
-                </section>
-            {% endfor %}
-        </article>
+
+
+
+    <div id="slides" class="content">
+        {% for slide in slides %}
+            <div class="slides">
+               <div class="img mySlides fade" style="background-image:url({{ slide.img.url }})"></div>
+            </div>
+        {% endfor %}
     </div>
+
+
 
 
 

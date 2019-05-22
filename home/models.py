@@ -73,7 +73,7 @@ class SlideImage(models.Model):
 
 class HomeTitle(models.Model):
 
-    title = models.CharField(max_length=70)
+    content = HTMLField()
 
     def __unicode__(self):
         return ('Home Title')
