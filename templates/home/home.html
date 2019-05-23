@@ -3,62 +3,66 @@
 {% block content %}
 
 
-        {% for land in content %}
-            <article id="landing">
+    {% for land in content %}
+        {% autoescape off %}
+            <div class="banner-title">
+                <h1 class="container">{{ land.title }}</h1>
+            </div>
+        {% endautoescape %}
+    {% endfor %}
+
+
+    <div id="info-boxes" class="container content">
+        {% for box in info_boxes %}
+            <article class="info-box">
                 {% autoescape off %}
-
-                    <h1 class="banner-title">{{ land.title }}</h1>
-                    <div class="content container">
-
-                        <p style="text-align: center">{{ land.content }}</p>
-
-                    </div>
+                    <h2 class="box-header">{{ box.header }}</h2>
+                    <div class="box-content">{{ box.content }}</div>
                 {% endautoescape %}
             </article>
         {% endfor %}
     </div>
 
 
-    <div id="info-boxes" class="content">
-        <article class="flex">
-            {% for box in info_boxes %}
-                <section class="col-sm-3 info">
-                    {% autoescape off %}
-                        <h3 class="box-header">{{ box.header }}</h3>
-                        <p>{{ box.content }}</p>
-                    {% endautoescape %}
-                </section>
-            {% endfor %}
-        </article>
+    <div id="link-boxes" class="container content-bottom">
+
+        <div class="link-box">
+
+            <h2>Meet Our Staff</h2>
+            <p>We have a high staff ratio and are all highly qualified and CRB checked.</p>
+
+            <button>
+                <img src="/static/icons/right-arrow-png-icon-2.png">
+            </button>
+        </div>
+
+        <div class="link-box">
+
+            <h2>Check out our activities</h2>
+
+            <p>We have lots of activited to keep your child happy!</p>
+
+            <button>
+                <img src="/static/icons/right-arrow-png-icon-2.png">
+            </button>
+
+
+        </div>
+
+
+
+        <div class="link-box">
+
+            <h2>Get in touch!</h2>
+
+            <p>Get in touch and one of our staff will be in touch ASAP</p>
+
+            <button>
+                <img src="/static/icons/right-arrow-png-icon-2.png">
+            </button>
+
+        </div>
     </div>
-
-
-
-
-
-    <script type="text/javascript">
-        var slideIndex = 0;
-        carousel();
-
-
-        function carousel() {
-            var i;
-
-            var x = $(".mySlides");
-
-            for (i = 0; i < x.length; i++) {
-              x[i].style.display = "none";
-            }
-
-            slideIndex++;
-
-            if (slideIndex > x.length) {slideIndex = 1}
-
-            x[slideIndex-1].style.display = "block";
-
-            setTimeout(carousel, 6000); // Change image every 2 seconds
-        }
-    </script>
 
 
 {% endblock %}

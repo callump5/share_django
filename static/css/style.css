@@ -19,7 +19,7 @@
     */
 
     /* fonts */
-    p {
+    p, li {
         font-size: 26px;
     }
 
@@ -40,6 +40,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            text-align: justify;
 
             font-size: 20px;
             font-family: var(--my-font);
@@ -60,13 +61,19 @@
 
 /* Index */
 
+    main {
+    }
     .container  {
         width: 90%;
         margin: 0 auto;
     }
 
     .content {
-        padding: 10px 0 ;
+        padding: 50px 0 ;
+    }
+
+    .content-bottom {
+        margin-bottom: 50px;
     }
 
 /* Navbar */
@@ -156,12 +163,12 @@
 
 #landing-image {
     width: 100%;
-    min-height: 35vh;
+    min-height: 45vh;
     background-image: url("/static/imgs/landing/back4.jpg");
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
-    padding: 10px;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,31 +192,163 @@
 .title {
     font-size: 2.2em;
     text-align: center;
-    margin: 15px 0;
-}
+ }
 
 .banner-title {
-    background-image:  linear-gradient(to left, #32c932, #4fb04f);
-    color: white;
-    font-size: 2.2em;
-    text-align: center;
+    background-image:  linear-gradient(to left, #40E0D0, #61c7bd);
     padding: 10px 0;
 }
+
+
+.banner-title h1, .banner-title2 h1{
+    color: white;
+    font-size: 1.8em;
+    text-align: center;}
 
 .banner-title2 {
     background-image:  linear-gradient(to left, #c932c9, #b04fb0);
 
     color: white;
-    font-size: 2.2em;
     text-align: center;
     padding: 10px 0;
 }
 
 
-#info-boxes {
+.info-box:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.info-box:last-child{
+    margin: 0;
+}
+
+.info-box:nth-child(even) .box-header{
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.box-header {
+    font-size: 1.7em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.box-content {
+    width: 90%;
+}
+
+
+#link-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.link-box {
+    width: 300px;
+    height: 400px;
+    padding: 25px;
+    background-color: #e6e6e6;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
 }
+.link-box h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.link-box button{
+    border-radius: 20px;
+    background-image:  linear-gradient(to left,#42f4d7, #67dbc8);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 40px ;
+    margin: 20px;
+}
+.link-box:nth-child(2n) button{
+
+    background-image:  linear-gradient(to left, #4050e0, #616bc7);
+
+}
+
+.link-box button img {
+    height: 30px;
+    width: auto;
+}
+
+footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e6e6e6;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+footer .number p  {
+    text-align: center;
+}
+
+
+    #slides {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
+        background: rgb(254,252,234); /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+
+    .img {
+        width: auto;
+        height: 45vh;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+
+.fade {
+    animation: fadein 6s;
+}
+
+@keyframes fadein {
+    0%{ opacity: 1;}
+    85%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+
+
+
 
 
 
@@ -224,7 +363,7 @@
 
 
     .container {
-        width: 60%;
+        width: 80%;
     }
 
     #nav {
@@ -268,6 +407,8 @@
     #nav-links li a   {
         padding: 0 10px;
     }
+
+
 
 
 }

@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import HomeTitle, SlideImage, HomeBox, HomeContent, FacebookLink, EmailLink, BackgroundImage
+from contact_us.forms import ContactRequestForm
+from django.contrib import messages
+
 
 import random
 
@@ -24,6 +27,18 @@ def get_home(request):
 
     facebook = FacebookLink.objects.all()
     email = EmailLink.objects.all()
+
+    if request.method == 'POST':
+        contact_form = ContactRequestForm(request.POST)
+        if contact_form.is_valid():
+            contact_form.save()
+            messages.success(request, 'Thanks for getting in touch! We will try to contact you as soon as possible!')
+            return redirect('services')
+        else:
+            contact_form = ContactRequestForm()
+    else:
+        contact_form = ContactRequestForm
+
 
     args = {
 
