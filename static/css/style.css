@@ -18,6 +18,11 @@
 
     */
 
+    /* fonts */
+    p {
+        font-size: 26px;
+    }
+
 
 
     /* Vars */
@@ -58,6 +63,10 @@
     .container  {
         width: 90%;
         margin: 0 auto;
+    }
+
+    .content {
+        padding: 10px 0 ;
     }
 
 /* Navbar */
@@ -148,10 +157,10 @@
 #landing-image {
     width: 100%;
     min-height: 35vh;
-    background-image: linear-gradient(to left, rgb(0, 204, 204), rgba(37, 204, 204, 0.7)) , url("/static/imgs/landing/back4.jpg");
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url("/static/imgs/landing/back4.jpg");
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -179,11 +188,31 @@
     margin: 15px 0;
 }
 
+.banner-title {
+    background-image:  linear-gradient(to left, #32c932, #4fb04f);
+    color: white;
+    font-size: 2.2em;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.banner-title2 {
+    background-image:  linear-gradient(to left, #c932c9, #b04fb0);
+
+    color: white;
+    font-size: 2.2em;
+    text-align: center;
+    padding: 10px 0;
+}
+
 
 #info-boxes {
     display: flex;
     flex-direction: column;
 }
+
+
+
 
 
 
@@ -195,13 +224,13 @@
 
 
     .container {
-        width: 70%;
+        width: 60%;
     }
 
     #nav {
         display: flex;
         flex-direction: row;
-    justify-content: space-between;
+        justify-content: space-between;
         align-items: center;
 
         border-bottom: 1px solid #ddd;
