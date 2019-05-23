@@ -293,8 +293,24 @@
     width: auto;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e6e6e6;
+}
 
+.footer-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
+footer .number p  {
+    text-align: center;
+}
 
 
 
