@@ -191,7 +191,7 @@
  }
 
 .banner-title {
-    background-image:  linear-gradient(to left, #32c932, #4fb04f);
+    background-image:  linear-gradient(to left,#42f4d7, #67dbc8);
     padding: 10px 0;
 }
 
@@ -274,7 +274,7 @@
 
 .link-box button{
     border-radius: 20px;
-    background-image:  linear-gradient(to left, #32c932, #4fb04f);;
+    background-image:  linear-gradient(to left,#42f4d7, #67dbc8);
     border: none;
     display: flex;
     justify-content: center;
