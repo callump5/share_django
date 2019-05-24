@@ -52,18 +52,34 @@
 /* Index */
 
     main {
+        background-color: #dcdcdc;
     }
-    .container  {
+
+    .container-plain {
+
         width: 90%;
         margin: 0 auto;
+        padding-left:10px;
+
+        padding-right: 10px;
+
+
+    }
+    .container  {
+        background-color: white;
+        width: 90%;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .content {
-        padding: 50px 0 ;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .content-bottom {
-        margin-bottom: 50px;
+        padding-bottom: 50px;
     }
 
 /* Navbar */
@@ -257,7 +273,7 @@
 
 .link-box {
     width: 300px;
-    height: 400px;
+    height: 450px;
     padding: 25px;
     background-color: #e6e6e6;
     border-radius: 1px;
@@ -279,19 +295,20 @@
 
 .link-box button{
     border-radius: 5px;
-    background-color: #e06540;
+    background-color: #40e0d0;
 
     border: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 5px 40px ;
     margin: 20px;
 }
-.link-box button img {
-    height: 30px;
-    width: auto;
+.arrow img {
+    height: auto;
+    width: 100px;
 }
+
 
 footer {
     padding: 20px;
@@ -304,9 +321,14 @@ footer {
 .footer-link {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+}
+
+.footer-link a {
+    margin: 5px;
 }
 
 footer .number p  {
@@ -375,6 +397,7 @@ footer .number p  {
 }
 
 
+
 #map {
 width: 100%
 }
@@ -385,17 +408,22 @@ width: 100%
 
 
 
-
-
-
 /* DESKTOP */
 
 /* RESPONSIVE MIN WIDTH - 800PX */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
 
+    .container-plain {
+
+        width: 80%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 
     .container {
-        width: 70%;
+        width: 80%;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     #nav {
@@ -405,16 +433,16 @@ width: 100%
         align-items: center;
 
         border-bottom: 1px solid #ddd;
-
     }
+
     #toggle {
         display: none;
     }
 
-
     #navbar-header {
         width: unset;
     }
+
     #nav-body, #social-links {
         display: block;
     }
@@ -432,30 +460,35 @@ width: 100%
         border: none;
     }
 
-    #nav-links li  {
+    #nav-links li {
         border: none;
         padding: 0;
     }
-    #nav-links li a   {
+
+    #nav-links li a {
         padding: 0 10px;
     }
 
     .info-box {
         flex-wrap: unset;
     }
-.box-header{
-    border-bottom: none;
-    margin-bottom: 0;
 
-}
+    .box-header {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
 
+    #map {
+        width: 100%
+    }
 
-#map-contact {
-    flex-wrap: unset;
-    justify-content: space-between;
-}
+    #map-contact {
+        flex-wrap: unset;
+        justify-content: space-between;
+    }
 
-
-
+    .footer-link {
+        justify-content: space-between;
+    }
 
 }
