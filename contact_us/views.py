@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 
 from smtplib import SMTPAuthenticationError
 from .forms import ContactRequestForm
-from .models import StaffContact
+from .models import StaffContact, OpenTimes
 from .send_email import send_contact_request, authError
 from home.models import BackgroundImage, EmailLink, FacebookLink
 import random
@@ -20,16 +20,12 @@ from django.contrib import messages
 
 def contact_us(request):
 
-    count = BackgroundImage.objects.filter(active=True).count()
-
-    rand = random.randint(1, count)
-
-    background = BackgroundImage.objects.filter(active=True).get(pk=rand)
 
     facebook = FacebookLink.objects.all()
     email = EmailLink.objects.all()
 
     contacts = StaffContact.objects.all()
+    open = OpenTimes.objects.all()
 
     if request.method == 'POST':
 
@@ -73,7 +69,8 @@ def contact_us(request):
         'facebook': facebook,
         'email': email,
 
-        'background': background,
+
+        'open': open,
 
         'form': contact_form,
         'contacts': contacts

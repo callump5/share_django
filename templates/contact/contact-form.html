@@ -1,0 +1,19 @@
+
+<div id='contact-form' class="form">
+    {% load bootstrap_tags %}
+    <form class='form' method="POST">
+        {% csrf_token %}
+        {{ form | as_bootstrap }}
+
+
+        <div class="g-recaptcha" data-sitekey="6Lcm0pQUAAAAAJCEtNcrhERrnpclECu9k4fpjmKr"></div>
+
+        <div class="gdpr">
+            <input type="checkbox"  id="tick" onchange="document.getElementById('contact-btn').disabled = !this.checked;" />
+            <p>By using this form you agree with the storage and handling of your data by this website.</p>
+        </div>
+
+        <button type="submit" class="btn" name="contact-btn" id="contact-btn" disabled>Contact Me!</button>
+
+    </form>
+</div>

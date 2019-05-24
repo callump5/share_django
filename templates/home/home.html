@@ -65,4 +65,21 @@
     </div>
 
 
+
+    <div class="banner-title2">
+        <h1 class="container">About Us</h1>
+    </div>
+
+    <div class="container content content-bottom">
+        {% for land in content %}
+            {% autoescape off %}
+                {{ land.content }}
+            {% endautoescape %}
+        {% endfor %}
+
+        <div id="map-contact">
+            {% include 'contact/map-opening.html' %}
+        </div>
+    </div>
+
 {% endblock %}

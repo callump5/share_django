@@ -1,0 +1,21 @@
+
+
+<div id="contact-times">
+    <div id="open-times">
+    <h2>Open Times</h2>
+    {% for time in open %}
+        <p>{{ time }}-{{ time.times }}</p>
+    {% endfor %}
+    </div>
+
+    <div id="staff-contact">
+    <h2>Staff Contact Details</h2>
+        {% for contact in contacts %}
+            <div class="contact">
+                <p>{{ contact.user.get_full_name }}</p>
+                <p>{{ contact.number }}</p>
+                <p>{{ contact.email }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>

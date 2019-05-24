@@ -3,23 +3,14 @@
 
     /*
 
-    font-family: 'Open Sans', sans-serif;
-
-
-    font-family: 'Quicksand', sans-serif;
-
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Muli', sans-serif;
 
     font-family: 'Indie Flower', cursive;
-
-
-
-
 
     */
 
     /* fonts */
-    p, li {
+    p, li, footer .number p a  {
         font-size: 26px;
     }
 
@@ -28,8 +19,7 @@
     /* Vars */
 
     :root {
-        --my-font: 'Quicksand', sans-serif;
-
+        --my-font:'Muli', sans-serif;
     }
 
 
@@ -51,7 +41,7 @@
         }
 
         h2 {
-            font-size: 22px;
+            font-size: 24px;
         }
 
         body {
@@ -195,7 +185,8 @@
  }
 
 .banner-title {
-    background-image:  linear-gradient(to left, #40E0D0, #61c7bd);
+  background-color: #40e0d0;
+
     padding: 10px 0;
 }
 
@@ -206,7 +197,8 @@
     text-align: center;}
 
 .banner-title2 {
-    background-image:  linear-gradient(to left, #c932c9, #b04fb0);
+
+  background-color: #40e0d0;
 
     color: white;
     text-align: center;
@@ -230,6 +222,7 @@
 .info-box {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px;
     margin-bottom: 20px;
@@ -242,6 +235,11 @@
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.box-header{
+    border-bottom: 1px solid grey;
 }
 
 .box-content {
@@ -262,12 +260,15 @@
     height: 400px;
     padding: 25px;
     background-color: #e6e6e6;
-    border-radius: 15px;
+    border-radius: 1px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
+    -webkit-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    -moz-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
 }
 .link-box h2 {
     font-size: 1.8em;
@@ -277,8 +278,9 @@
 
 
 .link-box button{
-    border-radius: 20px;
-    background-image:  linear-gradient(to left,#42f4d7, #67dbc8);
+    border-radius: 5px;
+    background-color: #e06540;
+
     border: none;
     display: flex;
     justify-content: center;
@@ -286,12 +288,6 @@
     padding: 5px 40px ;
     margin: 20px;
 }
-.link-box:nth-child(2n) button{
-
-    background-image:  linear-gradient(to left, #4050e0, #616bc7);
-
-}
-
 .link-box button img {
     height: 30px;
     width: auto;
@@ -318,15 +314,6 @@ footer .number p  {
 }
 
 
-    #slides {
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
-        background: rgb(254,252,234); /* Old browsers */
-        background: -moz-linear-gradient(-45deg, rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(-45deg, rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg, rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    }
-
     .img {
         width: auto;
         height: 45vh;
@@ -347,6 +334,51 @@ footer .number p  {
 }
 
 
+#contact-times, #map {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 300px;
+    background-color: #e6e6e6;
+    border-radius: 1px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    -moz-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+}
+
+#contact-times {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+#open-times {
+    margin-bottom: 10px;
+}
+
+
+#staff-contact p, #contact-times p{
+    font-size:  1em;
+    text-align: center;
+}
+#contact-times h2 {
+    text-align: center;}
+
+
+#map-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+#map {
+width: 100%
+}
+
 
 
 
@@ -363,7 +395,7 @@ footer .number p  {
 
 
     .container {
-        width: 80%;
+        width: 70%;
     }
 
     #nav {
@@ -407,6 +439,21 @@ footer .number p  {
     #nav-links li a   {
         padding: 0 10px;
     }
+
+    .info-box {
+        flex-wrap: unset;
+    }
+.box-header{
+    border-bottom: none;
+    margin-bottom: 0;
+
+}
+
+
+#map-contact {
+    flex-wrap: unset;
+    justify-content: space-between;
+}
 
 
 

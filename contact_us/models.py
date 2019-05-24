@@ -36,3 +36,14 @@ class ContactRequest(models.Model):
     class Meta():
         verbose_name = 'Contact Request'
         verbose_name_plural = 'Contact Requests'
+
+class OpenTimes(models.Model):
+    day = models.CharField(max_length=300)
+    times = models.CharField(max_length=400)
+
+    def __unicode__(self):
+        return self.day
+
+    class Meta():
+        verbose_name = 'Opening Time'
+        verbose_name_plural = 'Opening Times'
