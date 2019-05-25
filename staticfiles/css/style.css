@@ -9,13 +9,6 @@
 
     */
 
-    /* fonts */
-    p, li, footer .number p a  {
-        font-size: 26px;
-    }
-
-
-
     /* Vars */
 
     :root {
@@ -50,6 +43,15 @@
 
 
 /* Index */
+
+
+
+    /* fonts */
+    p, li, footer .number p a  {
+        font-size: 22px;
+    }
+
+
 
     main {
         background-color: #dcdcdc;
@@ -189,9 +191,13 @@
     align-items: center;
     color: white;
 }
+
+.slides .title p {
+    text-align: left;
+    font-size: 35px;
+}
 #landing-content p{
     color: white;
-    font-size: 50px
 }
 
 
@@ -412,6 +418,15 @@ width: 100%
 
 /* RESPONSIVE MIN WIDTH - 800PX */
 @media screen and (min-width: 1100px) {
+
+
+    /* fonts */
+    p, li, footer .number p a  {
+        font-size: 28px;
+    }
+
+
+
 
     .container-plain {
 
