@@ -199,7 +199,7 @@
     #landing-image .myslides {
         width: 100%;
         min-height: 45vh;
-        background-position: 50% 50%;
+        background-position: 50% 34%;
         background-repeat:   no-repeat;
         background-size:     cover;
         padding: 10px 0;
@@ -567,14 +567,15 @@
 
 
     .blackbaord{
+        height: 800px;
         display: flex;
         flex-direction: column;
         align-items: center;
 
     }
     .content-slider {
+        height: 100%;
         width: 90%;
-        height: 360px;
         background-image: url("/static/imgs/blackboard.jpg");
         border: 5px solid burlywood;
         overflow: hidden;
@@ -590,7 +591,6 @@
 
     .mask {
         overflow: hidden;
-        height: 320px;
     }
 
     .slider .testimonial {
@@ -625,9 +625,6 @@
 
     p.source {
         text-align: right;
-        position: absolute;
-        right: 0px;
-        bottom: 20px;
 
     }
 
@@ -779,6 +776,12 @@
         #corkboard {
             display: flex;
             width: 300px;
+        }
+
+        /* Testimonial */
+
+        .content-slider {
+        height: 360px;
         }
     }
 
@@ -972,6 +975,7 @@
 
 @-webkit-keyframes cycle {
     0% {
+        display: none;
         top: 0;
     }
     4% {
@@ -979,10 +983,14 @@
     }
     16% {
         top: 0;
+
+        display: block;
         opacity: 1;
         z-index: 0;
     }
     20% {
+
+        display: none;
         top: 325px;
         opacity: 0;
         z-index: 0;
@@ -1007,6 +1015,7 @@
         opacity: 0;
     }
     100% {
+        display: block;
         top: 0;
         opacity: 1;
     }
