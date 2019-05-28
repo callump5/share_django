@@ -525,7 +525,7 @@
     /* Staff Profiles */
 
         .staff-profile {
-            min-width: 760px;
+            width: 950px;
             height: unset;
             flex-direction: row;
         }
