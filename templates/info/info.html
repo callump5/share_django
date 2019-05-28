@@ -6,7 +6,12 @@
 
 {% block content %}
 
-    <h1 class="title">Information</h1>
+
+    <div class="banner-title">
+        <h1 class="container-plain">Information</h1>
+    </div>
+
+    <div class="container-plain content">
 
     {% autoescape off %}
         <div id="info-page">
@@ -17,10 +22,9 @@
 
             </article>
 
-            <article id="corkboard">
 
+            <div id="corkboard">
                 {% for note in notes %}
-
                     <aside class="notes">
                         <div class="pin-header">
                             <div class='pin'></div>
@@ -31,11 +35,10 @@
                             <img src="{{ note.image.url }}">
                         {% endif %}
                     </aside>
-
                 {% endfor %}
-            </article>
+            </div>
         </div>
-        
+
         <div class="sponsers">
             {% for sponser in sponsers %}
                 <div class="sponser">
@@ -46,4 +49,10 @@
 
 
 {% endautoescape %}
+
+
+
+
+    </div>
+
 {% endblock %}

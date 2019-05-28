@@ -14,6 +14,15 @@
     }
 
 
+    .testimonial p, .testimonial h2 {
+        color: white;
+        font-family: 'Indie Flower', cursive;;
+    }
+
+    .testimonial h2{
+        font-size: 38px;
+    }
+
 
 /* Vars */
 
@@ -415,8 +424,6 @@
 
 
 
-
-
 /* Contact */
 
     /* Contact & Maps */
@@ -465,6 +472,211 @@
         width: 100%
     }
 
+
+
+/* Information */
+
+    #info-content p {
+        padding: 5px 0;
+        margin-bottom: 20px;
+    }
+
+    #info-page {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #corkboard {
+        width: 80%;
+        background-image: url("/static/imgs/corkboard.jpg");
+        border: burlywood 10px solid;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .notes {
+        background-color: #f4ff5f;
+        min-width: 260px;
+        max-width: 280px;
+        margin: 20px 10px;
+        padding: 0 10px;
+        padding-bottom: 20px;
+        transform: rotate(-2deg);
+        font-size: 0.8em;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .notes img {
+        width: 200px;
+        height: auto;
+        padding: 5px;
+        justify-content: center;
+    }
+
+    .pin-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    .pin {
+        border: solid 5px #ff291d;
+        background-color: red;
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        margin: 10px;
+        box-shadow: 0 3px 8px 1px #888888;
+    }
+
+    .notes:nth-child(even){
+        background-color: #c4e3f3;
+        transform: rotate(3deg);
+    }
+
+    .notes:nth-child(3){
+        transform: rotate(-4deg);
+    }
+
+    .sponsers {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .sponser img {
+        width: auto;
+        height: 75px;
+    }
+
+/* Testimonials */
+
+    .help-chalk {
+        display: none;
+    }
+
+
+    .blackbaord{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .content-slider {
+        width: 90%;
+        height: 360px;
+        background-image: url("/static/imgs/blackboard.jpg");
+        border: 5px solid burlywood;
+        overflow: hidden;
+    }
+
+    .slider {
+        height: auto;
+        width: 90%;
+        margin: 25px auto 0;
+        overflow: visible;
+        position: relative;
+    }
+
+    .mask {
+        overflow: hidden;
+        height: 320px;
+    }
+
+    .slider .testimonial {
+        position: absolute;
+        top: -325px;
+        list-style: none;
+        color: white;
+    }
+
+    .help-chalk {
+        position: relative;
+        color: white;
+    }
+
+    .help-chalk {
+        float: right;
+    }
+
+    .testimonial{
+        height: 100%;
+        width: 100%;
+    }
+
+    .testimonial h1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .testimonial p {
+        padding-bottom: 5px;
+    }
+
+    p.source {
+        text-align: right;
+        position: absolute;
+        right: 0px;
+        bottom: 20px;
+
+    }
+
+    .slider .testimonial.anim1 {
+        -moz-animation: cycle 25s linear infinite;
+        -webkit-animation: cycle 25s linear infinite;
+        animation: cycle 25s linear infinite;
+    }
+
+    .slider .testimonial.anim2 {
+        -moz-animation: cycle2 25s linear infinite;
+        -webkit-animation: cycle2 25s linear infinite;
+        animation: cycle2 25s linear infinite;
+    }
+
+    .slider .testimonial.anim3 {
+        -moz-animation: cycle3 25s linear infinite;
+        -webkit-animation: cycle3 25s linear infinite;
+         animation: cycle3 25s linear infinite;
+    }
+
+    .slider .testimonial.anim4 {
+        -moz-animation: cycle4 25s linear infinite;
+        -webkit-animation: cycle4 25s linear infinite;
+        animation: cycle4 25s linear infinite;
+    }
+
+    .slider .testimonial.anim5 {
+        -moz-animation: cycle5 25s linear infinite;
+        -webkit-animation: cycle5 25s linear infinite;
+        animation: cycle5 25s linear infinite;
+    }
+
+    .slider:hover .testimonial{
+        -moz-animation-play-state: paused;
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+    }
+
+
+
+
+
+
+
+
+
+
+
 /* Responsive Desktop */
 /* DESKTOP */
 
@@ -473,6 +685,11 @@
 
     /* Header */
         /* Navbar */
+
+
+        #toggle {
+            display: none;
+        }
 
         .social-text {
             display: block;
@@ -550,5 +767,398 @@
             text-align: left;
             margin: 0;
         }
+
+
+        /* Information */
+
+        #info-page {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        #corkboard {
+            display: flex;
+            width: 300px;
+        }
     }
+
+
+
+
+
+/* Testimonial Animation */
+
+@-moz-keyframes cycle {
+    0% {
+        top: 0;
+    }
+    4% {
+        top: 0;
+    }
+    16% {
+        top: 0;
+        opacity: 1;
+        z-index: 0;
+    }
+    20% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    21% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+    92% {
+        top: -325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    96% {
+        top: -325px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes cycle2 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+    16% {
+        top: -325px;
+        opacity: 0;
+    }
+    20% {
+        top: 0;
+        opacity: 1;
+    }
+    24% {
+        top: 0;
+        opacity: 1;
+    }
+    36% {
+        top: 0;
+        opacity: 1;
+        z-index: 0;
+    }
+    40% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    41% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@-moz-keyframes cycle3 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+    36% {
+        top: -325px;
+        opacity: 0;
+    }
+    40% {
+        top: 0;
+        opacity: 1;
+    }
+    44% {
+        top: 0;
+        opacity: 1;
+    }
+    56% {
+        top: 0;
+        opacity: 1;
+    }
+    60% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    61% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@-moz-keyframes cycle4 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+    56% {
+        top: -325px;
+        opacity: 0;
+    }
+    60% {
+        top: 0;
+        opacity: 1;
+    }
+    64% {
+        top: 0;
+        opacity: 1;
+    }
+    76% {
+        top: 0;
+        opacity: 1;
+        z-index: 0;
+    }
+    80% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    81% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@-moz-keyframes cycle5 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+    76% {
+        top: -325px;
+        opacity: 0;
+    }
+    80% {
+        top: 0;
+        opacity: 1;
+    }
+    84% {
+        top: 0;
+        opacity: 1;
+    }
+    96% {
+        top: 0;
+        opacity: 1;
+        z-index: 0;
+    }
+    100% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+@-webkit-keyframes cycle {
+    0% {
+        top: 0;
+    }
+    4% {
+        top: 0;
+    }
+    16% {
+        top: 0;
+        opacity: 1;
+        z-index: 0;
+    }
+    20% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    21% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+    50% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+    92% {
+        top: -325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    96% {
+        top: -325px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes cycle2 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+    16% {
+        top: -325px;
+        opacity: 0;
+    }
+    20% {
+        top: 0;
+        opacity: 1;
+    }
+    24% {
+        top: 0;
+        opacity: 1;
+    }
+    36% {
+        top: 0;
+        opacity: 1;
+        z-index: 0;
+    }
+    40% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    41% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@-webkit-keyframes cycle3 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+    36% {
+        top: -325px;
+        opacity: 0;
+    }
+    40% {
+        top: 0;
+        opacity: 1;
+    }
+    44% {
+        top: 0;
+        opacity: 1;
+    }
+    56% {
+        top: 0;
+        opacity: 1;
+        z-index: 0;
+    }
+    60% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    61% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@-webkit-keyframes cycle4 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+    56% {
+        top: -325px;
+        opacity: 0;
+    }
+    60% {
+        top: 0;
+        opacity: 1;
+    }
+    64% {
+        top: 0;
+        opacity: 1;
+    }
+    76% {
+        top: 0;
+        opacity: 1;
+        z-index: 0;
+    }
+    80% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+    81% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+    100% {
+        top: -325px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@-webkit-keyframes cycle5 {
+    0% {
+        top: -325px;
+        opacity: 0;
+    }
+    76% {
+        top: -325px;
+        opacity: 0;
+    }
+    80% {
+        top: 0;
+        opacity: 1;
+    }
+    84% {
+        top: 0;
+        opacity: 1;
+    }
+    96% {
+        top: 0;
+        opacity: 1;
+        z-index: 0;
+    }
+    100% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+
+
+
 

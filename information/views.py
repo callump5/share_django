@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
-from home.models import BackgroundImage, EmailLink, FacebookLink
+from home.models import HomeTitle, SlideImage, EmailLink, FacebookLink
 from information.models import InfoContent, StickyNote, Sponsers
 
 import random
@@ -12,10 +12,8 @@ import random
 
 def get_info(request):
 
-    count = BackgroundImage.objects.filter(active=True).count()
-    rand = random.randint(1, count)
-    background = BackgroundImage.objects.filter(active=True).get(pk=rand)
-
+    title = HomeTitle.objects.get(pk=1)
+    slides = SlideImage.objects.all()
     facebook = FacebookLink.objects.all()
     email = EmailLink.objects.all()
 
@@ -24,12 +22,14 @@ def get_info(request):
     sponser = Sponsers.objects.all()
 
     args = {
+        'title': title,
+        'slides': slides,
         'facebook': facebook,
         'email': email,
-        'background': background,
         'info': info,
         'notes': notes,
         'sponsers': sponser,
     }
+
 
     return render(request, 'info/info.html', args)
