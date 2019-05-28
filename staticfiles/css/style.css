@@ -461,7 +461,7 @@
         flex-wrap: wrap;
     }
 
-    #map {
+    #map, #contact-times {
     width: 100%
     }
 
@@ -503,13 +503,17 @@
             align-items: center;
         }
 
-        #map {
+        #map, #contact-times {
             width: 100%
         }
 
         #map-contact {
             flex-wrap: unset;
             justify-content: space-between;
+        }
+
+         #contact-times {
+            width: unset
         }
 
 
