@@ -28,7 +28,6 @@
                     <div class="mask">
 
                         {% for testimonial in list %}
-                            {% if testimonial.id < 6 %}
                                 <article class="testimonial">
                                     <h2>{{ testimonial.title }}</h2>
                                     {% autoescape off %}
@@ -36,8 +35,6 @@
                                         <p class="source">{{ testimonial.author }}</p>
                                 </article>
                                     {% endautoescape %}
-                            {% endif %}
-
                         {% endfor %}
 
                         <p class="help-chalk">Hover with your mouse to pause!</p>

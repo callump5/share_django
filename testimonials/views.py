@@ -19,7 +19,7 @@ def get_testimonials(request):
     facebook = FacebookLink.objects.all()
     email = EmailLink.objects.all()
 
-    testimonial_list = Testimonial.objects.all()
+    testimonial_list = Testimonial.objects.all()[:6]
 
     args = {
         'title': title,
