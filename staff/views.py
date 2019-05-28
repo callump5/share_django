@@ -3,27 +3,30 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
-from home.models import BackgroundImage, FacebookLink, EmailLink
+
+from home.models import SlideImage
+from home.models import BackgroundImage, HomeTitle, FacebookLink, EmailLink
 from staff.models import Role, Staff_Bio
 import random
 
 # Create your views here.
 
 def get_staff(request):
+
     staff = Staff_Bio.objects.all()
     roles = Role.objects.all().order_by('rank')
 
-    count = BackgroundImage.objects.filter(active=True).count()
-    rand = random.randint(1, count)
-    background = BackgroundImage.objects.filter(active=True).get(pk=rand)
 
+    title = HomeTitle.objects.get(pk=1)
+    slides = SlideImage.objects.all()
     facebook = FacebookLink.objects.all()
     email = EmailLink.objects.all()
 
     args = {
+        'title': title,
+        'slides': slides,
         'facebook': facebook,
         'email': email,
-        'background': background,
         'staffs': staff,
         'roles': roles
     }
