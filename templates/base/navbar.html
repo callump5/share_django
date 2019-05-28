@@ -1,42 +1,42 @@
-<header class="container">
+<header>
 
     <nav id="nav">
 
-        <div id="navbar-header">
+        <div id="navbar-header" class="container">
         <!-- Nav Logo -->
-            <a href="#">
-                <img id="nav_logo" src="/static/imgs/Logo2.png">
-            </a>
+        <img id="nav_logo" src="/static/imgs/Logo2.png">
+
+        <!-- Social Links -->
+
+        <div id="social-links">
+            {% if facebook %}
+                <a href="/" class="s-link link"><img href="/" src="/static/icons/facebook.png"><span class="social-text">/Sharerespitebasildonessex/</span></a>
+            {% endif %}
+                <a href="/" class="s-link link"><img href="/" src="/static/icons/phone.png"><span class="social-text">07412090817</span> </a>
+
+            {% if email %}
+                <a href="mailto:me@hotmail.com" class="s-link link"><img src="/static/icons/email.png"><span class="social-text">me@hotmail.co.uk</span> </a>
+            {% endif %}
+        </div>
+
+
         <!-- Nav Toggler -->
             <img id="toggle" src="/static/icons/menu.png">
         </div>
 
-        </div>
-        <!-- Nav Social Links -->
+
+
         <div id="nav-body">
-        <hr>
-
         <!-- Nav Links -->
-            <ul id="nav-links">
-                <li><a class="nav-btn" href ="/">Home</a></li>
-                <li><a class="nav-btn" href ="/testimonials/">Testimonials</a></li>
-                <li><a class="nav-btn" href="/staff-profiles/">Staff</a></li>
-                <li><a class="nav-btn" href="/info/">Info</a></li>
-                <li><a class="nav-btn" href="/fundraising/">Fundraising</a></li>
-                <li><a class="nav-btn" href="/policies/">Policies</a></li>
-                <li><a class="nav-btn" href="/contact-us/">Contact</a></li>
+            <ul id="nav-links" class="nav-container">
+                <li><a class="nav-btn link" href ="/">Home</a></li>
+                <li><a class="nav-btn link" href ="/testimonials/">Testimonials</a></li>
+                <li><a class="nav-btn link" href="/staff-profiles/">Staff</a></li>
+                <li><a class="nav-btn link" href="/info/">Info</a></li>
+                <li><a class="nav-btn link" href="/fundraising/">Fundraising</a></li>
+                <li><a class="nav-btn link" href="/policies/">Policies</a></li>
+                <li><a class="nav-btn link" href="/contact-us/">Contact</a></li>
             </ul>
-        </div>
-
-        <div id="social-links">
-            <div class="social">
-            {% if facebook %}
-                <a href="/" class="s-link"><img href="/" src="/static/icons/facebook-Icon.png"></a>
-            {% endif %}
-            {% if email %}
-                <a href="mailto:me@hotmail.com" class="s-link"><img src="/static/icons/email-icon.png"></a>
-            {% endif %}
-            </div>
         </div>
 
     </nav>
@@ -44,9 +44,7 @@
 
     <script type="text/javascript">
         $( "#toggle" ).click(function() {
-            $( "#nav-body" ).toggle( "fast", function() {
-                // Animation complete.
-            });$( "#social-links" ).toggle( "fast", function() {
+            $( "#nav-links" ).toggle( "fast", function() {
                 // Animation complete.
             });
         });
