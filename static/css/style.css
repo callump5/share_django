@@ -184,11 +184,9 @@
         border-bottom: none;
     }
 
-
-
 /* Home */
 
-#landing-image .myslides{
+#landing-image .myslides {
     width: 100%;
     min-height: 45vh;
     background-position: 50% 50%;
