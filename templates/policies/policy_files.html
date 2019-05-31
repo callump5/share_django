@@ -2,16 +2,22 @@
 
 {% block content %}
 
-    <h1 class="title">Policies</h1>
 
-    {% for file in files %}
-        <div class="files">
-            <div class="file-desc">
-                <h3>{{ file.title }}</h3>
-                <p>{{ file.desciption }}</p>
+    <div class="banner-title">
+        <h1 class="container-plain">Policies</h1>
+    </div>
+
+    <div class="container-plain content">
+
+        {% for file in files %}
+            <div class="files">
+                <div class="file-header">
+                    <h2>{{ file.title }}</h2>
+                    <a class="upload" href="{{ file.document.url }}"><img src="/static/icons/file_download.png"></a>
+                </div>
+                <p class="file-description">{{ file.desciption }}</p>
             </div>
-            <a class="upload" href="{{ file.document.url }}"><img src="/static/icons/file_download.png"></a>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock %}
 

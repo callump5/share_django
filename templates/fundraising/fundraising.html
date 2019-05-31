@@ -14,11 +14,13 @@
 
 
 
-{% block base %}
+{% block content %}
 
-    <h1 class="title">Fundraising</h1>
+    <div class="banner-title">
+        <h1 class="container-plain">Fundraising</h1>
+    </div>
 
-    <div id="targets">
+    <div id="targets" class="container-plain content">
 
         {% for target in targets %}
 
@@ -29,56 +31,69 @@
 
                 <div id='target_{{ forloop.counter0 }}' class="target">
 
-                    <h2>{{ target.title }}</h2>
 
-                    <div class="target-desc">
-                        <div class="target-text">
+                    <div class="files">
+                        <div class="file-header">
+                            <h2>{{ target.title }}</h2>
+                        </div>
+
+                        <div class="file-description">
                             {% autoescape off %}
-                                <p>{{ target.description }}</p>
+                                {{ target.description }}
                             {% endautoescape %}
                         </div>
 
+                        <div class="target-desc">
+
                         <div class="target-imgs">
-                            <img src="{{ target.image_1.url }}"
-                                    {% if target.image_2 and target.image_3 %}
+
+                            <div style="background-image: url({{ target.image_1.url }}")
+                                {% if target.image_2 and target.image_3 %}
                                     class="target-img target-img-4"
-                                    {% elif target.image_2 %}
+                                {% elif target.image_2 %}
                                     class="target-img target-img-2"
-                                    {% else %}
+                                {% else %}
                                     class="target-img target-img-1"
-                                    {% endif %}
-                            >
+                                {% endif %}></div>
 
                             {% if target.image_2  %}
-                                <img src="{{ target.image_2.url }}"
+                                <div style="background-image: url({{ target.image_2.url }}")
                                     {% if target.image_3 %}
                                         class="target-img target-img-3"
                                     {% else %}
                                         class="target-img target-img-2"
+                                    {% endif %}>
+                                </div>
+                            {% endif %}
+
+                                {% if target.image_3 %}
+
+                                    <div class="target-img target-img-3" style="background-image: url({{ target.image_3.url }}")></div>
+                                {% endif %}
+
+                                <img class="service-pointer" src="/static/icons/pointer.png">
+                            </div>
+
+
+                            <div class="donations">
+                                <div class="target-donations">
+                                    {% if target.target > 0  %}
+                                        <p>Target: £{{ target.target }}</p>
                                     {% endif %}
-                            >
-                            {% endif %}
+                                    <p>Acheived: £{{ target.count_achieved }}</p>
+                                </div>
+
+                                <button value="{{ forloop.counter }}" onclick="openDonation()" class="donate-btn btn-success">Donate</button>
+                            </div>
 
 
-                            {% if target.image_3 %}
-                                <img class="target-img target-img-3" src="{{ target.image_3.url }}">
-                            {% endif %}
-
-                            <img class="service-pointer" src="/static/icons/pointer.png">
-                        </div>
-                    </div>
-
-
-                    <div class="donations">
-                        <div class="target-donations">
-                            {% if target.target > 0  %}
-                                <p>Target: £{{ target.target }}</p>
-                            {% endif %}
-                            <p>Acheived: £{{ target.count_achieved }}</p>
                         </div>
 
-                        <button value="{{ forloop.counter }}" onclick="openDonation()" class="donate-btn btn-success">Donate</button>
-                    </div>
+
+
+
+                </div>
+
 
 
     </div>

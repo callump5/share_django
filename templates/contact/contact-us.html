@@ -10,6 +10,45 @@
 {% endblock %}
 {% block content %}
 
-    <h1 class="title">Get In Touch!</h1>
-        {% include 'contact/map.html' %}
+
+    <div class="banner-title">
+        <h1 class="container-plain">Information</h1>
+    </div>
+
+    <div class="container-plain content">
+        {% include 'contact/map-opening.html' %}
+        {% include 'contact/contact-form.html' %}
+    </div>
+
+
+    <script type="text/javascript">
+
+            $('#div_id_name').addClass('wrap-1');
+        $('#div_id_number').addClass('wrap-1');
+        $('.g-recaptcha').addClass('wrap-1');
+        $('#div_id_email').addClass('wrap-1');
+        $('#div_id_text').addClass('wrap-2');
+        $('#div_id_day').addClass('wrap-2');
+        $('#callform-submit').addClass('wrap-2');
+        $('#call-form .alert').addClass('wrap-3');
+
+
+        $('.wrap-1').wrapAll('<div class=col-md-6>');
+        $('.wrap-2').wrapAll('<div class=col-md-6>');
+        $('.col-md-6').wrapAll('<div class=row>');
+
+        $('#id_day').css('position', 'relative');
+
+        $( function() {
+            $( "#id_day" ).datepicker({
+                showOn: "button",
+                buttonImage: "/static/icons/edit.png",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+
+
+    </script>
+
 {% endblock %}

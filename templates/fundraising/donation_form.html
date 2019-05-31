@@ -3,10 +3,16 @@
 
                         <div id='donation-form' class="form-popup">
 
-                            <button id="close-btn">X</button>
+
+    <div class="banner-title">
+        <h1 class="container-plain">Donate</h1>
+
+        <button id="close-btn">X</button>
+    </div>
+
                             {% load bootstrap_tags %}
 
-                            <form method="POST" id="booking-form">
+                            <form method="POST" id="booking-form" class="container-plain">
 
                                 {% csrf_token %}
                                 {{ donation_form | as_bootstrap }}

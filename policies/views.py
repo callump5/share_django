@@ -1,33 +1,26 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render,redirect
-
-from home.models import BackgroundImage, FacebookLink, EmailLink
+from django.shortcuts import render
+from home.models import HomeTitle, SlideImage, FacebookLink, EmailLink
 from .models import FileUpload
-
-
-import random
-
 
 # Create your views here.
 
 def get_policies(request):
 
-    count = BackgroundImage.objects.filter(active=True).count()
-    rand = random.randint(1, count)
-    background = BackgroundImage.objects.filter(active=True).get(pk=rand)
-
+    title = HomeTitle.objects.get(pk=1)
+    slides = SlideImage.objects.all()
     facebook = FacebookLink.objects.all()
     email = EmailLink.objects.all()
 
     uploadfiles = FileUpload.objects.all()
 
-
     args = {
+        'title': title,
+        'slides': slides,
         'facebook': facebook,
         'email': email,
-        'background': background,
         'files': uploadfiles,
     }
 

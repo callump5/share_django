@@ -199,7 +199,7 @@
     #landing-image .myslides {
         width: 100%;
         min-height: 45vh;
-        background-position: 50% 34%;
+        background-position: 50% 70%;
         background-repeat:   no-repeat;
         background-size:     cover;
         padding: 10px 0;
@@ -489,6 +489,7 @@
     }
 
     #corkboard {
+        min-width: 300px;
         width: 80%;
         background-image: url("/static/imgs/corkboard.jpg");
         border: burlywood 10px solid;
@@ -501,7 +502,7 @@
 
     .notes {
         background-color: #f4ff5f;
-        min-width: 260px;
+        width: 260px;
         max-width: 280px;
         margin: 20px 10px;
         padding: 0 10px;
@@ -664,15 +665,253 @@
         animation-play-state: paused;
     }
 
+    .files {
+        background-color: white;
+        margin-bottom: 20px;
+        -webkit-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+        -moz-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+        box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    }
+
+    .files:last-child {
+        margin-bottom: 0;
+    }
+
+    .file-header {
+        background-color: #40d1e0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px;
+    }
+
+    .file-header h1, .file-header h2 {
+        color: white;
+    }
+
+    .upload {
+        height: 24px;
+    }
+
+    .file-description {
+        padding: 5px 10px;
+    }
 
 
 
 
+/* Fundraising */
+
+    #target_0 {
+        padding-top: 0
+    }
+    .target-donations {
+        margin-top: 5px;
+        text-align: center;
+    }
+    .target h1 {
+        font-size: 2.5em;
+    }
+
+    .donations {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .donations button {
+        padding: 25px;
+        border-radius: 5px;
+    }
+
+    .target-desc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .target-text {
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+
+    .target-img {
+
+        background-position: 50% 50%;
+        background-repeat:   no-repeat;
+        background-size:     cover;
+    }
+
+    .target-imgs {
+        min-width: 200px;
+        width: 200px;
+        position: relative;
+        height: 200px;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: rgba(200, 200, 200, 0.53);
+        border: 5px solid rgba(200, 200, 200, 0.53);;
+        margin: 20px 0;
+
+        background-position: 50% 50%;
+        background-repeat:   no-repeat;
+        background-size:     cover;
+    }
+
+    .target-pointer {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 20px;
+        width: auto;
+        margin: 5px;
+    }
+
+    .target-img-1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .target-img-2 {
+        width: 49%;
+        height: 100%;
+    }
+
+    .target-img-2:last-child{
+        margin-left: 2px;
+    }
+
+    .target-img-3 {
+        width: 48%;
+        height: 49%;
+        margin-left: 2px;
+        position: absolute;
+        right: 0;
+    }
+
+    .target-img-3:nth-child(2n) {
+        bottom: 0;
+    }
+
+    .img-3 {
+        bottom: 0;
+        top: unset;
+    }
+
+    .target-img-4 {
+        width: 50%;
+        height: 100%;
+    }
 
 
+    .service-pointer {
+        display: none;
+    }
+
+    #donation-form .banner-title {
+        display: flex; flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #donation-form .banner-title button {
+        color: white;
+    }
+
+    #booking-form div {
+        margin: 10px 0;
+        text-align: right;
+    }
+
+    label {
+        text-align: left;
+    }
+
+    .form-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -228px;
+        margin-left: -200px;
+        z-index: 90;
+        width: 400px;
+        background-color: white;
+        -webkit-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+        -moz-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+        box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
+    }
+
+    #close-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 25px;
+        width: 25px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    .donate-btn {
+        margin: 15px 0;
+    }
+
+    #validate_card_btn, #contact-btn {
+        padding: 10px;
+    }
 
 
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
 
+    .col-md-6 {
+        width: 48%;
+        padding: 10px;
+    }
+
+    #contact-form input {
+        width: 100%;
+    }
+
+     #contact-form textarea {
+         height: 275px;
+         width: 100%;
+     }
+
+     #contact-form div{
+         margin: 10px 0;
+     }
+
+     div.gdpr {
+         display: flex;
+         flex-direction: row;
+
+     }
+
+     #contact-form .gdpr input {
+         width: unset;
+     }
+
+     #tick {
+         margin-right: 20px;
+     }
+
+     .padding {
+         padding: 10px;
+     }
 
 /* Responsive Desktop */
 /* DESKTOP */
@@ -776,6 +1015,7 @@
         #corkboard {
             display: flex;
             width: 300px;
+            margin-left: 15px;
         }
 
         /* Testimonial */

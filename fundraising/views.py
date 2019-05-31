@@ -9,8 +9,8 @@ import stripe
 import stripe.error
 from share_settings.staging import STRIPE_PUBLISHABLE_KEY
 
-from home.models import BackgroundImage, FacebookLink, EmailLink
-from fundraising.models import FundraisingTarget, Donations
+from home.models import HomeTitle, SlideImage, FacebookLink, EmailLink
+from fundraising.models import Donations
 from .forms import DonationForm
 from.models import FundraisingTarget
 
@@ -22,12 +22,8 @@ import random
 def get_fundraising(request):
 
 
-    count = BackgroundImage.objects.filter(active=True).count()
-
-    rand = random.randint(1, count)
-
-    background = BackgroundImage.objects.filter(active=True).get(pk=rand)
-
+    title = HomeTitle.objects.get(pk=1)
+    slides = SlideImage.objects.all()
     facebook = FacebookLink.objects.all()
     email = EmailLink.objects.all()
 
@@ -64,10 +60,10 @@ def get_fundraising(request):
 
     args = {
 
+        'title': title,
+        'slides': slides,
         'facebook': facebook,
         'email': email,
-
-        'background': background,
 
         'targets': targets,
         'donations': donations,
@@ -79,9 +75,6 @@ def get_fundraising(request):
     args.update(csrf(request))
 
     return render(request, 'fundraising/fundraising.html', args)
-
-
-
 
 
 
