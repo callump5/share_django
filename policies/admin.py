@@ -2,8 +2,9 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from .models import FileUpload
+from .models import FileUpload, PolicyCateory
 
 # Register your models here.
 
+admin.site.register(PolicyCateory)
 admin.site.register(FileUpload)
