@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect
 from contact_us.models import OpenTimes, StaffContact
 from contact_us.forms import ContactRequestForm
-from .models import HomeTitle, SlideImage, HomeBox, HomeContent, FacebookLink, EmailLink, BackgroundImage
+from .models import HomeTitle, SlideImage, HomeBlurb, AboutUs, FacebookLink, EmailLink
 from contact_us.forms import ContactRequestForm
 from django.contrib import messages
 
@@ -18,8 +18,8 @@ def get_home(request):
 
     title = HomeTitle.objects.get(pk=1)
     slides = SlideImage.objects.all()
-    info_boxes = HomeBox.objects.all()
-    content = HomeContent.objects.all()
+    info_boxes = HomeBlurb.objects.all()
+    content = AboutUs.objects.all()
 
 
     contacts = StaffContact.objects.all()
@@ -41,12 +41,9 @@ def get_home(request):
 
 
     args = {
-
         'facebook': facebook,
         'email': email,
-
         'open': open,
-
         'form': contact_form,
         'contacts': contacts,
 

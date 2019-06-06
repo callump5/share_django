@@ -8,29 +8,22 @@
     </div>
 
     <div class="container-plain content">
+        {% for category in categories %}
 
+            <div class="files">
 
-    {% for category in categories %}
-
-        <div class="files">
-            <h1>{{ category }}</h1>
-
-        <div class="file-header">
-            <h2>{{ file.title }}</h2>
-            <a class="upload" href="{{ file.document.url }}"><img src="/static/icons/file_download.png"></a>
-        </div>
-
-
-        </div>
-
-
-    {% endfor %}
-
-
-        {% for file in files %}
-
-                <p class="file-description">{{ file.desciption }}</p>
-
+            <div class="file-header">
+                <h2>{{ category }}</h2>
+            </div>
+                {% for file in files %}
+                    {% if file.category.id == category.id %}
+                        <div class="file">
+                            <h3>{{ file.title }}</h3>
+                            <a class="upload" href="{{ file.document.url }}"><img src="/static/icons/file_download.png"></a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
         {% endfor %}
     </div>
 {% endblock %}

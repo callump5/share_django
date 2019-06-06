@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 from home.models import HomeTitle, SlideImage
 from testimonials.models import Testimonial
-from home.models import BackgroundImage, FacebookLink, EmailLink
+from home.models import FacebookLink, EmailLink
 
 import random
 # Create your views here.

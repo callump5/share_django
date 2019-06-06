@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 
 from home.models import SlideImage
-from home.models import BackgroundImage, HomeTitle, FacebookLink, EmailLink
+from home.models import HomeTitle, FacebookLink, EmailLink
 from staff.models import Role, Staff_Bio
 import random
 

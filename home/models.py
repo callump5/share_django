@@ -23,7 +23,6 @@ def upload_home_img(instance, filename):
     )
 
 
-
 # Facebook Link
 
 class FacebookLink(models.Model):
@@ -36,7 +35,6 @@ class FacebookLink(models.Model):
     class Meta():
         verbose_name = 'Facebook Link'
         verbose_name_plural = 'Facebook Link'
-
 
 
 # Email Link
@@ -53,8 +51,7 @@ class EmailLink(models.Model):
         verbose_name_plural = 'Email Link'
 
 
-
-# Slide Images
+# Slideshow Images
 
 class SlideImage(models.Model):
 
@@ -84,48 +81,33 @@ class HomeTitle(models.Model):
 
 
 
-# Home Content
+# About Us
 
-class HomeContent(models.Model):
+class AboutUs(models.Model):
 
     title = models.CharField(max_length=70)
     content = HTMLField()
 
     def __unicode__(self):
-        return str('Home Article - ' + str(self.id))
+        return 'About Us'
 
     class Meta():
-        verbose_name = 'Article'
-        verbose_name_plural = 'Home Articles'
+        verbose_name = 'About Info'
+        verbose_name_plural = 'About Info'
 
 
 
-# Home Box
+# Home Blurb
 
-class HomeBox(models.Model):
+class HomeBlurb(models.Model):
 
     header = models.CharField(max_length=200)
     content = HTMLField(max_length=260)
 
     def __unicode__(self):
-        return 'Home Box - ' + str(self.id)
+        return 'Home Blurb - ' + str(self.id)
 
     class Meta():
-        verbose_name = 'Home Box'
-        verbose_name_plural= 'Home Boxes'
+        verbose_name = 'Home Blurb'
+        verbose_name_plural= 'Home Blurbs'
 
-
-# Background Image
-
-class BackgroundImage(models.Model):
-
-    image = models.ImageField(upload_to=upload_home_img)
-    active = models.BooleanField()
-
-
-    def __unicode__(self):
-        return 'Background - ' + str(self.id)
-
-    class Meta():
-        verbose_name = 'Background'
-        verbose_name_plural= 'Background Images'

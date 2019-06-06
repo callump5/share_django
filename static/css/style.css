@@ -29,6 +29,8 @@
     :root {
         --my-font:'Muli', sans-serif;
         --color-1: black;
+        --border: #ebebeb;
+
     }
 
 
@@ -199,9 +201,9 @@
     #landing-image .myslides {
         width: 100%;
         min-height: 45vh;
-        background-position: 50% 70%;
+        background-position: 50% 50%;
         background-repeat:   no-repeat;
-        background-size:     cover;
+        background-size:     100% auto;
         padding: 10px 0;
 
     }
@@ -295,8 +297,12 @@
         border-bottom: 1px solid grey;
     }
 
+    .blurb {
+        text-align: center;
+    }
+
     .box-content {
-        width: 90%;
+        margin-bottom: 10px;
     }
 
 
@@ -330,6 +336,10 @@
     .link-box h2 {
         font-size: 1.8em;
         text-align: center;
+    }
+
+    .link-box p {
+        padding: 5px;
     }
 
     .link-box-button {
@@ -680,9 +690,6 @@
     .file-header {
         background-color: #40d1e0;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
         padding: 5px 10px;
     }
 
@@ -690,6 +697,17 @@
         color: white;
     }
 
+    .file {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        border-bottom: 1px solid var(--border);
+    }
+    .file:last-child {
+        border-bottom: none;
+    }
     .upload {
         height: 24px;
     }
