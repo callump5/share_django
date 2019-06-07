@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'fundraising',
     'policies',
     'cookies',
+    'activities',
     'django_forms_bootstrap'
 ]
 

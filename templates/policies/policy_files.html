@@ -10,11 +10,12 @@
     <div class="container-plain content">
         {% for category in categories %}
 
-            <div class="files">
+            <div class="policies">
 
-            <div class="file-header">
-                <h2>{{ category }}</h2>
-            </div>
+                <div class="category-header">
+                    <h2>{{ category }}</h2>
+                </div>
+
                 {% for file in files %}
                     {% if file.category.id == category.id %}
                         <div class="file">

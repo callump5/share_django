@@ -34,6 +34,9 @@ urlpatterns = [
     # Home Urls
     url(r'', include('home.urls')),
 
+    # Activities Urls
+    url(r'', include('activities.urls')),
+
     # Information Urls
     url(r'', include('information.urls')),
 

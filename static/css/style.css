@@ -10,7 +10,7 @@
     */
 
     p, li, footer .number p a  {
-        font-size: 22px;
+        font-size: 20px;
     }
 
 
@@ -675,7 +675,9 @@
         animation-play-state: paused;
     }
 
-    .files {
+
+
+    .activity, .files, .policies {
         background-color: white;
         margin-bottom: 20px;
         -webkit-box-shadow: 10px 10px 17px 3px rgba(0,0,0,0.27);
@@ -687,10 +689,31 @@
         margin-bottom: 0;
     }
 
-    .file-header {
+    .category-header, .upload-header {
         background-color: #40d1e0;
         display: flex;
         padding: 5px 10px;
+    }
+
+    .category-header h2, .upload-header h3 {
+        color: white;
+        font-size: 25px;
+    }
+
+    .upload-header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .activity-description {
+        margin-bottom: 15px;
+    }
+    .activity-text {
+        padding: 10px;
+    }
+    .activity-text:first-child p {
+        margin-bottom: 10px;
     }
 
     .file-header h1, .file-header h2 {
@@ -720,6 +743,10 @@
 
 
 /* Fundraising */
+
+    .target {
+        margin-bottom: 25px;
+    }
 
     #target_0 {
         padding-top: 0
@@ -932,6 +959,11 @@
      .padding {
          padding: 10px;
      }
+
+
+     /* Activities */
+
+    .category-header {}
 
 /* Responsive Desktop */
 /* DESKTOP */

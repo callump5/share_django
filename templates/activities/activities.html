@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+
+    <div class="banner-title">
+        <h1 class="container-plain">Ativities</h1>
+    </div>
+
+    <div class="container-plain content">
+        {% for activity in activities %}
+            <div class="activity">
+                <div class="upload-header">
+                    <h3>{{ activity.title }}</h3>
+                    <a class="upload" href="{{ file.document.url }}"><img src="/static/icons/file_download.png"></a>
+                </div>
+
+                <div class="activity-text">
+                    <div class="activity-description">
+                        {{ activity.description }}
+                    </div>
+
+                    <p>Available Slots: {{ activity.slots }}</p>
+
+                    {% if activity.start_date  %}
+                        <p>Start Date:
+                            {{ activity.start_date }}
+                        </p>
+                    {% endif %}
+
+                    {% if activity.one_date %}
+                        <p>
+                            Takes Place:
+                            {{ activity.one_date }}
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
