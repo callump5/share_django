@@ -41,8 +41,8 @@ class FundraisingTarget(models.Model):
 
 
     class Meta():
-        verbose_name = 'Fundraising Target'
-        verbose_name_plural = 'Fundraising Targets'
+        verbose_name = 'Fundraising Campaign'
+        verbose_name_plural = 'Fundraising Campaign'
 
 
 class Donations(models.Model):
