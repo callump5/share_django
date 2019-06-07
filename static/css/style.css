@@ -796,6 +796,8 @@
     .target-img-1 {
         width: 100%;
         height: 100%;
+        background-position: 50%;
+        background-size: contain;
     }
 
     .target-img-2 {
