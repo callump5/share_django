@@ -944,18 +944,20 @@
     .row {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
 
     .col-md-6 {
         width: 48%;
-        padding: 10px;
     }
 
     #contact-form input {
+        padding: 5px;
         width: 100%;
     }
 
      #contact-form textarea {
+         padding: 5px;
          height: 275px;
          width: 100%;
      }
