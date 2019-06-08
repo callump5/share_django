@@ -4,8 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 
 from home.models import SlideImage, EmailLink, FacebookLink
-from .models import ActivitySheet, ActivityCategory
-
+from .models import ActivitySchedule
 # Create your views here.
 
 def get_activities(request):
@@ -14,8 +13,7 @@ def get_activities(request):
     facebook = FacebookLink.objects.all()
     email = EmailLink.objects.all()
 
-    activities = ActivitySheet.objects.all()
-    categories = ActivityCategory.objects.all()
+    activities = ActivitySchedule.objects.all()
 
 
     args = {
@@ -25,7 +23,6 @@ def get_activities(request):
         'email': email,
 
         'activities': activities,
-        'categories': categories
     }
 
     return render(request, 'activities/activities.html', args)

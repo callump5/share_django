@@ -3,10 +3,9 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from .models import ActivityCategory, ActivitySheet
+from .models import ActivitySchedule
 
 # Register your models here.
 
 
-admin.site.register(ActivitySheet)
-admin.site.register(ActivityCategory)
+admin.site.register(ActivitySchedule)

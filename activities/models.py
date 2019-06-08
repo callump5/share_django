@@ -6,6 +6,8 @@ from django.utils.timezone import now
 
 from django.db import models
 
+from tinymce.models import HTMLField
+
 
 # Create your models here.
 
@@ -18,29 +20,19 @@ def upload_activity_image(instance, filename):
     )
 
 
-class ActivityCategory(models.Model):
-    category = models.CharField(max_length=300)
+class ActivitySchedule(models.Model):
+    date = models.DateField()
+    time = models.TimeField(blank=True, null=True)
+    document = models.FileField(help_text='Upload any material for the day',upload_to=upload_activity_image, null=True, blank=True)
 
-    class Meta():
-        verbose_name_plural = 'Activity Categories'
-        verbose_name = 'Activity Category'
-
-    def __unicode__(self):
-        return self.category
-
-
-class ActivitySheet(models.Model):
-    category = models.ForeignKey(ActivityCategory, related_name='category_file')
-    title = models.CharField(max_length=200)
-    document = models.FileField(upload_to=upload_activity_image)
-    description = models.TextField()
-    slots = models.IntegerField()
-    start_date = models.DateTimeField(u'Re-occuring Start date', help_text='not-required', null=True, blank=True)
-    once_date = models.DateTimeField(u'One Off Date', help_text='not-required',null=True, blank=True)
+    activities = HTMLField()
+    required = models.TextField(help_text='For any requirements for the students e.g. lunch, spare clothes',null=True, blank=True)
+    transport = models.TextField(help_text='Pick up/Drop off points',null=True, blank=True)
+    slots = models.IntegerField(blank=True, null=True)
 
     class Meta ():
-        verbose_name_plural = 'Activity Sheets'
-        verbose_name = 'Activity Sheet'
+        verbose_name_plural = 'Activity Schedule'
+        verbose_name = 'Day Activities'
 
     def __unicode__(self):
-        return self.title
+        return str(self.date)

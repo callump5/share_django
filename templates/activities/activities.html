@@ -7,36 +7,33 @@
         <h1 class="container-plain">Activities</h1>
     </div>
 
-    <div class="container-plain content">
-        {% for activity in activities %}
-            <div class="activity">
-                <div class="upload-header">
-                    <h3>{{ activity.title }}</h3>
-                    <a class="upload" href="{{ file.document.url }}"><img src="/static/icons/file_download.png"></a>
-                </div>
+        <div class="container-plain content">
 
-                <div class="activity-text">
-                    <div class="activity-description">
-                        {{ activity.description }}
-                    </div>
+        <table style="width:100%">
+            <tr class="table-header">
+                <th>Date</th>
+                <th>Activities</th>
+                <th>Items To Bring</th>
+                <th>Meeting Area</th>
+                <th>Slots</th>
+            </tr>
 
-                    <p>Available Slots: {{ activity.slots }}</p>
-
-                    {% if activity.start_date  %}
-                        <p>Start Date:
-                            {{ activity.start_date }}
-                        </p>
-                    {% endif %}
-
-                    {% if activity.once_date %}
-                        <p>
-                            Takes Place:
-                            {{ activity.one_date }}
-                        </p>
-                    {% endif %}
-                </div>
-            </div>
-        {% endfor %}
+            {% for activity in activities %}
+                <tr>
+                    <td>{{ activity }}</td>
+                    <td>{% autoescape off %}
+                        {{ activity.activities }}</td>
+                    {% endautoescape %}
+                    <td>{{ activity.required }}</td>
+                    <td>{{ activity.transport }}</td>
+                    <td>{{ activity.slots }}</td>
+                </tr>
+            {% endfor %}
+        </table>
     </div>
+
+
+
+
 {% endblock %}
 

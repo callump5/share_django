@@ -110,6 +110,14 @@
         padding-right: 10px;
     }
 
+
+    .nav-container  {
+        width: 90%;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .content {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -694,6 +702,20 @@
         display: flex;
         padding: 5px 10px;
     }
+
+    .table-header {
+        background-color: #40d1e0;
+    }
+    .table-header th {
+        padding: 10px 5px;
+        color: white;
+    }
+
+    td {
+        padding: 10px;
+        text-align: center;
+    }
+
 
     .category-header h2, .upload-header h3 {
         color: white;
