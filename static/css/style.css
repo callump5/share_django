@@ -110,14 +110,6 @@
         padding-right: 10px;
     }
 
-
-    .nav-container  {
-        width: 90%;
-        margin: 0 auto;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
     .content {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -185,7 +177,7 @@
     }
 
     #nav-links {
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -201,7 +193,6 @@
     #nav-links li:last-child {
         border-bottom: none;
     }
-
 /* Home */
 
     /* Landing Images */
@@ -210,11 +201,10 @@
         width: 100%;
         min-height: 45vh;
         background-position: 50% 50%;
-        background-repeat:   no-repeat;
-        background-size:     100% auto;
+        background-repeat: no-repeat;
         padding: 10px 0;
-
     }
+
     .landing-content{
         min-height: 45vh;
         display: flex;
@@ -228,6 +218,7 @@
         font-size: 45px;
         text-align: left;
     }
+
     #landing-content p{
         color: white;
     }
@@ -706,6 +697,7 @@
     .table-header {
         background-color: #40d1e0;
     }
+
     .table-header th {
         padding: 10px 5px;
         color: white;
@@ -980,14 +972,22 @@
          margin-right: 20px;
      }
 
-     .padding {
-         padding: 10px;
-     }
+
+ /* Activities */
+
+    #mobile-table {
+        display: none;
+    }
 
 
-     /* Activities */
+    tr:nth-child(odd) {
+        background-color: var(--border)
+    }
 
-    .category-header {}
+
+    tr:nth-child(1) {
+        background-color: #40d1e0
+    }
 
 /* Responsive Desktop */
 /* DESKTOP */
@@ -995,9 +995,23 @@
 /* RESPONSIVE MIN WIDTH - 800PX */
     @media screen and (min-width: 1100px) {
 
+        /* Fonts */
+
+    p, li, footer .number p a  {
+        font-size: 24px;
+    }
+
+
     /* Header */
         /* Navbar */
 
+
+        .nav-container  {
+            width: 90%;
+            margin: 0 auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
 
         #toggle {
             display: none;
@@ -1008,12 +1022,16 @@
         }
 
         #nav-links {
+            display: flex;
             flex-direction: row;
         }
 
 
-
     /* Home*/
+
+    #landing-image .myslides {
+        background-size: 100% auto;
+    }
 
         /* Info Box */
 
@@ -1486,4 +1504,43 @@
 
 
 
+@media
+only screen and (max-width: 700px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 200px;
+  }
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 200px;
+    padding-right: 40px;
+    white-space: nowrap;
+  }
+  td:nth-of-type(1):before { content: "Date"; }
+  td:nth-of-type(2):before { content: "Acitivities"; }
+  td:nth-of-type(3):before { content: "Items To Bring"; }
+  td:nth-of-type(4):before { content: "Meeting Area";}
+  td:nth-of-type(5):before { content: "Slots";}
+
+  th {
+      display: none;
+  }
+  #mobile-table {
+      display: block;
+  }
+}
 

@@ -13,7 +13,7 @@ def get_activities(request):
     facebook = FacebookLink.objects.all()
     email = EmailLink.objects.all()
 
-    activities = ActivitySchedule.objects.all()
+    activities = ActivitySchedule.objects.all().order_by('date')
 
 
     args = {

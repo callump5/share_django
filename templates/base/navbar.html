@@ -21,7 +21,7 @@
 
 
         <!-- Nav Toggler -->
-            <img id="toggle" src="/static/icons/menu.png">
+            <img id="toggle" src="/static/icons/menu.png" onclick="toggleNav()">
         </div>
 
 
@@ -43,14 +43,41 @@
     </nav>
 </header>
 
+{% block head_js %}
+
     <script type="text/javascript">
+
+
+        function openNav() {
+            $(this).css('display', 'flex');
+            nav = true;
+        }
+
+        function closeNav() {
+            $(this).css('display', 'none');
+            nav = false;
+        }
+
+        function toggleNav() {
+            nav ? closeNav() : openNav();
+        }
+
         $( "#toggle" ).click(function() {
             $( "#nav-links" ).toggle( "fast", function() {
+
                 // Animation complete.
             });
         });
+
         $('#nav-links li').click(function () {
             var link = $(this).find('a').attr('href');
             location.href = link
-        })
+        });
+
+
+
+
+
+
     </script>
+{% endblock %}
