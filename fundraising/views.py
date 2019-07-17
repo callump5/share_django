@@ -22,7 +22,7 @@ import random
 def get_fundraising(request):
 
 
-    title = HomeTitle.objects.get(pk=1)
+    title = HomeTitle.objects.all().first()
     slides = SlideImage.objects.all()
     facebook = FacebookLink.objects.all()
     email = EmailLink.objects.all()

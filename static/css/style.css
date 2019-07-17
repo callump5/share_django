@@ -1,18 +1,45 @@
 
+/* Reset */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-family: 'Muli', sans-serif;
+        color: black;
+        list-style: none;
+        text-decoration: none;
+    }
+ body {
+        line-height: 1.4;
+    }
+
 /* Fonts */
 
     /*
+
+
+
+    font-family: 'Playfair Display', serif;
+
+    font-family: 'Montserrat', sans-serif;
 
     font-family: 'Muli', sans-serif;
 
     font-family: 'Indie Flower', cursive;
 
+
     */
 
-    p, li, footer .number p a  {
-        font-size: 20px;
+
+    h1, h2, h3, h3 {
+    font-family: 'Muli', sans-serif;
     }
 
+    p, li, footer .number p a, button, a, strong {
+        font-family: 'Montserrat', sans-serif;
+    }
 
     .testimonial p, .testimonial h2 {
         color: white;
@@ -24,38 +51,13 @@
     }
 
 
+
 /* Vars */
 
     :root {
         --my-font:'Muli', sans-serif;
         --color-1: black;
         --border: #ebebeb;
-
-    }
-
-
-
-/* Reset */
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-
-        font-size: 20px;
-        font-family: var(--my-font);
-        font-weight: bold;
-        color: black;
-        list-style: none;
-        text-decoration: none;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    body {
-        line-height: 1.4;
     }
 
 
@@ -97,26 +99,25 @@
     }
 
     .container-plain {
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
         padding-left:10px;
         padding-right: 10px;
     }
 
     .container  {
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
         padding-left: 10px;
         padding-right: 10px;
     }
 
     .content {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding: 35px 0;
     }
 
     .content-bottom {
-        padding-bottom: 50px;
+        padding-bottom: 35px;
     }
 
 
@@ -124,30 +125,98 @@
 
     /* Navbar */
 
-    #nav_logo {
-        height: 80px;
-        width: auto;
-    }
-
-    #navbar-header {
-        display: flex;
-        flex-direction: row;
+    #nav-links {
+        display: none;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 0;
+    }
+
+    #nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0 ;
+        border-bottom: 1px #ebebeb solid;
+    }
+
+    #nav-links li:last-child {
+        border-bottom: none;
+    }
+/* Home */
+
+    /* Landing Images */
+
+    #landing-image {
+        position: relative;
+        width: 100%;
+        min-height:35vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: 150vw;
+        overflow-y: hidden;
+    }
+
+
+
+    .img-block {
+        width: 50%;
+        height:50vw;
+        background-position: 50% 50%;
+        background-size: 200% auto;
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.4);
+        background-blend-mode: multiply;
+
+    }
+
+    #landing-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     #toggle {
-        height: 28px;
-        width: auto;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+        z-index: 100;
     }
+
+    .myslides  p {
+        color: white;
+        font-size: 45px;
+        text-align: left;
+    }
+
+    #landing-content p{
+        color: white;
+        font-size: 2em;
+    }
+
+    #landing_logo {
+        width: auto;
+        height: 150px;
+        z-index: 100;
+
+    }
+
 
     #social-links {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: baseline;
+        margin: 25px 0;
     }
 
     #social-links a {
@@ -171,58 +240,6 @@
     .social-text {
         display: none;
     }
-
-    #nav-body {
-        border-top: #ebebeb 1px solid;
-    }
-
-    #nav-links {
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #nav-links li {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0 ;
-        border-bottom: 1px #ebebeb solid;
-    }
-
-    #nav-links li:last-child {
-        border-bottom: none;
-    }
-/* Home */
-
-    /* Landing Images */
-
-    #landing-image .myslides {
-        width: 100%;
-        min-height: 45vh;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        padding: 10px 0;
-    }
-
-    .landing-content{
-        min-height: 45vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: white;
-    }
-
-    .myslides  p {
-        color: white;
-        font-size: 45px;
-        text-align: left;
-    }
-
-    #landing-content p{
-        color: white;
-    }
-
 
     /* Slid Fade */
 
@@ -310,7 +327,7 @@
     #link-boxes {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
         flex-wrap: wrap;
 
     }
@@ -334,6 +351,7 @@
     }
     .link-box h2 {
         font-size: 1.8em;
+
         text-align: center;
     }
 
@@ -341,15 +359,27 @@
         padding: 5px;
     }
 
-    .link-box-button {
+    .link-box-button, .donations button {
         margin-top: 15px;
         padding: 10px;
-        background-color: #e87bc0;
+        border: 2px solid  #e87bc0;
+        color: #e87bc0;
         text-align: center;
-        color: white;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 100;
     }
 
+    .link-box:nth-child(2) > a:nth-child(3){
+        border: 2px solid  #40d1e0;
+        color: #40d1e0;
+    }
 
+    #targets.container-plain.content div:nth-child(odd).target div.files div.target-desc div.donations button.donate-btn.btn-success {
+
+        border: 2px solid  #40d1e0;
+        color: #40d1e0;
+    }
 /* Footer */
 
 
@@ -495,6 +525,7 @@
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        padding-bottom: 30px;
     }
 
     #corkboard {
@@ -560,13 +591,13 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 50px;
+        margin-top: 25px;
         align-items: center;
         justify-content: space-evenly;
     }
     .sponser img {
-        width: auto;
-        height: 75px;
+        width: 10vw;
+        height: auto;
     }
 
 /* Testimonials */
@@ -703,15 +734,28 @@
         color: white;
     }
 
+    table p, td {
+        font-size: 16px;
+    }
+
     td {
         padding: 10px;
         text-align: center;
     }
 
 
-    .category-header h2, .upload-header h3 {
+    .category-header h2 {
         color: white;
-        font-size: 25px;
+        width: 100%;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .upload-header h2{
+        text-align: left;
+        color: white;
+        width: 100%;
+        font-size: 1.5em;
     }
 
     .upload-header {
@@ -758,6 +802,7 @@
 
 /* Fundraising */
 
+
     .target {
         margin-bottom: 25px;
     }
@@ -781,10 +826,6 @@
         align-items: center;
     }
 
-    .donations button {
-        padding: 25px;
-        border-radius: 5px;
-    }
 
     .target-desc {
         display: flex;
@@ -811,17 +852,21 @@
         width: 200px;
         position: relative;
         height: 200px;
-        background-color: white;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        background-color: rgba(200, 200, 200, 0.53);
-        border: 5px solid rgba(200, 200, 200, 0.53);;
+        background-color: #40d1e0;
+        border: 4px solid  #40d1e0;
         margin: 20px 0;
 
         background-position: 50% 50%;
         background-repeat:   no-repeat;
         background-size:     cover;
+    }
+
+    #targets.container-plain.content div:nth-child(even).target div.files div.target-desc div.target-imgs{
+        border: 4px solid  #e87bc0;
+        color: #e87bc0;
     }
 
     .target-pointer {
@@ -838,7 +883,7 @@
         width: 100%;
         height: 100%;
         background-position: 50%;
-        background-size: contain;
+        background-size: cover;
     }
 
     .target-img-2 {
@@ -1007,7 +1052,7 @@
 
 
         .nav-container  {
-            width: 90%;
+            width: 80%;
             margin: 0 auto;
             padding-left: 10px;
             padding-right: 10px;
@@ -1019,6 +1064,7 @@
 
         .social-text {
             display: block;
+            color: white;
         }
 
         #nav-links {
@@ -1029,9 +1075,14 @@
 
     /* Home*/
 
-    #landing-image .myslides {
-        background-size: 100% auto;
-    }
+        .img-block{
+             width: 20%;
+            height: 20vw;
+        }
+
+        #landing-image .myslides {
+            background-size: 100% auto;
+        }
 
         /* Info Box */
 
@@ -1063,8 +1114,9 @@
             width: unset
         }
 
-
-
+         #landing_logo {
+             height: 200px;
+         }
     /* Footer */
 
         .footer-link {

@@ -12,14 +12,14 @@
 
             <div class="policies">
 
-                <div class="category-header">
+                <div class="upload-header">
                     <h2>{{ category }}</h2>
                 </div>
 
                 {% for file in files %}
                     {% if file.category.id == category.id %}
                         <div class="file">
-                            <h3>{{ file.title }}</h3>
+                            <p>{{ file.title }}</p>
                             <a class="upload" href="{{ file.document.url }}"><img src="/static/icons/file_download.png"></a>
                         </div>
                     {% endif %}

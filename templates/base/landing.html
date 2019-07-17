@@ -1,12 +1,32 @@
 <div id="landing-image">
+
+    <img id="toggle" src="/static/icons/menu-white.png">
+
+    <div id="landing-content" class="container">
+        <img id="landing_logo" src="/static/imgs/Logo2.png">
+        {% autoescape off %}
+            <p>{{ title.content }}</p>
+        {% endautoescape %}
+
+        <div id="social-links">
+            {% if facebook %}
+                <a href="/" class="s-link link"><img href="/" src="/static/icons/fb-white.png"><span class="social-text">/Sharerespitebasildonessex/</span></a>
+            {% endif %}
+                <a href="/" class="s-link link"><img href="/" src="/static/icons/phone-white.png"><span class="social-text">07412090817</span> </a>
+
+            {% if email %}
+                <a href="mailto:me@hotmail.com" class="s-link link"><img src="/static/icons/email-white.png"><span class="social-text">me@hotmail.co.uk</span> </a>
+            {% endif %}
+        </div>
+    </div>
+
+
     {% for slide in slides %}
-        <div class="fade myslides" style="background-image:url({{ slide.img.url }})">
-        <div class="landing-content container-plain">
-            {% autoescape off %}
-                {{ title.content }}
-            {% endautoescape %}
-        </div>
-        </div>
+        <div class="img-block" style="background-image:url({{ slide.img.url }})"></div>
+    {% endfor %}
+
+    {% for slide in slides %}
+        <div class="img-block" style="background-image:url({{ slide.img.url }})"></div>
     {% endfor %}
 </div>
 
@@ -14,30 +34,35 @@
 
 
 
-{% block body_js %}
+{% block head_js %}
+
     <script type="text/javascript">
-        var slideIndex = 0;
-        carousel();
 
-        function carousel() {
-            var i;
 
-            var x = $(".myslides");
-
-            for (i = 0; i < x.length; i++) {
-              x[i].style.display = "none";
-            }
-
-            slideIndex++;
-
-            if (slideIndex > x.length) {slideIndex = 1}
-
-            x[slideIndex-1].style.display = "block";
-
-            setTimeout(carousel, 6000); // Change image every 2 seconds
+        function openNav() {
+            $(this).css('display', 'flex');
+            nav = true;
         }
+
+        function closeNav() {
+            $(this).css('display', 'none');
+            nav = false;
+        }
+
+        function toggleNav() {
+            nav ? closeNav() : openNav();
+        }
+
+        $( "#toggle" ).click(function() {
+            $( "#nav-links" ).toggle( "fast", function() {
+
+                // Animation complete.
+            });
+        });
+
+        $('#nav-links li').click(function () {
+            var link = $(this).find('a').attr('href');
+            location.href = link
+        });
     </script>
 {% endblock %}
-
-
-

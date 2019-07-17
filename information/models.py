@@ -49,7 +49,7 @@ class StickyNote(models.Model):
 class Sponsers(models.Model):
 
     company = models.CharField(max_length=250)
-
+    website = models.CharField(max_length=500)
     image = models.ImageField(upload_to=upload_info_img)
 
     def __unicode__(self):

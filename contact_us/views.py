@@ -7,7 +7,7 @@ from smtplib import SMTPAuthenticationError
 from .forms import ContactRequestForm
 from .models import StaffContact, OpenTimes
 from .send_email import send_contact_request, authError
-from home.models import SlideImage, EmailLink, FacebookLink
+from home.models import SlideImage, EmailLink, FacebookLink, HomeTitle
 import random
 
 import requests
@@ -20,6 +20,8 @@ from django.contrib import messages
 
 def contact_us(request):
 
+
+    title = HomeTitle.objects.all().first()
     contacts = StaffContact.objects.all()
     open = OpenTimes.objects.all()
 
@@ -72,6 +74,7 @@ def contact_us(request):
 
         'facebook': facebook,
         'email': email,
+        'title': title,
 
         'slides': slides,
 

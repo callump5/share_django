@@ -39,10 +39,13 @@
             </div>
         </div>
 
+        <h1 class="title">A Special Thanks To All Our Sponsers</h1>
         <div class="sponsers">
             {% for sponser in sponsers %}
                 <div class="sponser">
+                <a href="//{{ sponser.website }}">
                     <img src="{{ sponser.image.url }}">
+                </a>
                 </div>
             {% endfor %}
         </div>

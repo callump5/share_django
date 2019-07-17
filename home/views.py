@@ -16,7 +16,7 @@ import random
 
 def get_home(request):
 
-    title = HomeTitle.objects.get(pk=1)
+    title = HomeTitle.objects.all().first()
     slides = SlideImage.objects.all()
     info_boxes = HomeBlurb.objects.all()
     content = AboutUs.objects.all()
