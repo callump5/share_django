@@ -734,7 +734,7 @@
         color: white;
     }
 
-    table p, td {
+    table p, td, table li {
         font-size: 16px;
     }
 
